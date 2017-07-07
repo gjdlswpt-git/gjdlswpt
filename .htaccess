@@ -1,6 +1,0 @@
-<IfModule mod_rewrite.c>
-Options +FollowSymLinks
-rewriteEngine on
-rewriteCond %{http_host} ^gjdlswpt.cn [NC]
-rewriteRule ^(.*)$ http://www.gjdlswpt.cn/$1 [R=301,L]
-</IfModule>

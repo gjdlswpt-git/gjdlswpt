@@ -1,1 +1,0 @@
-var DTPath = "http://www.gjdlswpt.cn/";var SKPath = "http://www.gjdlswpt.cn/skin/default/";var MEPath = "http://www.gjdlswpt.cn/member/";var EXPath = "http://www.gjdlswpt.cn/extend/";var CKDomain = "";var CKPath = "/";var CKPrex = "cto_";

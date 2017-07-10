@@ -39,7 +39,11 @@
                             <?php if(is_array($tags)) { foreach($tags as $i => $t) { ?>
                             <li style="float: left">
                                 <div style="display: inline-block;margin: 5px 10px">
+<<<<<<< HEAD
                                     <a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+=======
+                                    <a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+>>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
  title="<?php echo $t['alt'];?>"><img style="border: 1px solid #ccc" src="<?php echo $t['thumb'];?>" width="140" height="50"/>
                                     <p style="text-align: center"><?php echo $t['title'];?></p></a>
                                 </div>
@@ -59,7 +63,11 @@
                             <?php if(is_array($tags)) { foreach($tags as $i => $t) { ?>
                             <li style="padding-bottom: 10px ;font-size:13px">
                                 <span class="points"><i style=""></i></span>
+<<<<<<< HEAD
                                 <a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+=======
+                                <a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+>>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
  title="<?php echo $t['alt'];?>"><?php echo dsubstr($t['title'], 50, '...');?></a>
                                 <span style="float: right">[<?php echo date('Y-m-d', $t['addtime']);?>]</span>
                             </li>
@@ -84,7 +92,11 @@
                     <?php $tags=tag("moduleid=21&condition=status=3 and level=1&areaid=$cityid&order=addtime desc&pagesize=16&datetype=2&template=null")?>
                  <ul>
                     <?php if(is_array($tags)) { foreach($tags as $i => $t) { ?>
+<<<<<<< HEAD
                      <li style="padding:5px 0;font-size: 12px;"><span class="points"><i></i></span><a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+=======
+                     <li style="padding:5px 0;font-size: 12px;"><span class="points"><i></i></span><a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+>>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
  title="<?php echo $t['alt'];?>"><?php echo dsubstr($t['title'], 33, '...');?></a><span style="float: right">[<?php echo date('Y-m-d', $t['addtime']);?>]</span></li>
                     <?php } } ?>
                  </ul>
@@ -107,7 +119,11 @@
                     <?php $tags=tag("moduleid=5&length=36&condition=status=3 and level>0 and thumb<>''&areaid=$cityid&pagesize=14&order=addtime desc&width=100&height=100&cols=5&target=_blank&lazy=$lazy&template=null")?>
                     <?php if(is_array($tags)) { foreach($tags as $i => $t) { ?>
                     <li>
+<<<<<<< HEAD
                         <a href="<?php echo $t['linkurl'];?>"<?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+=======
+                        <a href="<?php echo $t['linkurl'];?>"<?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+>>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
 >
                         <img src="<?php echo $t['thumb'];?>" alt="<?php echo $t['title'];?>" title="<?php echo $t['title'];?>" width="116" height="116" />
                         </a>
@@ -135,7 +151,11 @@
                         <?php $tags=tag("moduleid=5&condition=status=3&areaid=$cityid&pagesize=10&datetype=2&target=_blank&order=addtime desc&template=null")?>
                         <?php if(is_array($tags)) { foreach($tags as $i => $t) { ?>
                         <li style="padding: 6px 10px;font-size: 14px">
+<<<<<<< HEAD
                             <span class="points"><i></i></span><a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+=======
+                            <span class="points"><i></i></span><a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+>>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
 ><?php echo dsubstr($t['title'], 26, '...');?></a><span style="float: right">[<?php echo date('Y-m-d', $t['addtime']);?>]</span>
                         </li>
                         <?php } } ?>
@@ -147,7 +167,11 @@
                       <?php $tags=tag("moduleid=6&condition=status=3&areaid=$cityid&pagesize=10&datetype=2&target=_blank&order=addtime desc&template=null")?>
                         <?php if(is_array($tags)) { foreach($tags as $i => $t) { ?>
                         <li style="padding: 6px 10px;font-size: 14px">
+<<<<<<< HEAD
                             <span class="points"><i></i></span><a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+=======
+                            <span class="points"><i></i></span><a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
+>>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
 ><?php echo dsubstr($t['title'], 26, '...');?></a><span style="float: right">[<?php echo date('Y-m-d', $t['addtime']);?>]</span>
                         </li>
                         <?php } } ?>
@@ -194,7 +218,11 @@
                         <?php if(is_array($tags)) { foreach($tags as $i => $t) { ?>
                         <li style="float: left;padding:0 3px ">
                             <div style="display: inline-block;margin: 5px 10px">
+<<<<<<< HEAD
                                 <a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>" <?php } ?>
+=======
+                                <a href="<?php echo $t['linkurl'];?>" <?php if($target) { ?> target="<?php echo $target;?>" <?php } ?>
+>>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
 ><img style="border: 1px solid #ccc" src="<?php echo $t['thumb'];?>" alt="<?php echo $t['title'];?>" width="128" height="98"/>
                                     <p style="text-align: center;font-size: 14px"><?php echo $t['title'];?></p></a>
                             </div>
@@ -242,7 +270,11 @@
                             <?php if(is_array($tags)) { foreach($tags as $t) { ?>
                             <li><i></i><a href="<?php echo $t['linkurl'];?>" target="_blank"><?php echo $t['company'];?></a></li>
                             <?php } } ?>
+<<<<<<< HEAD
                             <?php if($showpage && $pages) { ?><div class="pages"><?php echo $pages;?></div><?php } ?>
+=======
+                            <?php if($showpage && $pages) { ?><div class="pages"><?php echo $pages;?></div><?php } ?>
+>>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
                         </ul>
                     </div>
                 </div>
@@ -297,7 +329,11 @@
             <?php if(is_array($tags)) { foreach($tags as $i => $t) { ?>
                 <a href="<?php echo $t['linkurl'];?>" target="_blank"><?php echo $t['title'];?></a>
             <?php } } ?>
+<<<<<<< HEAD
         <?php } ?>
+=======
+        <?php } ?>
+>>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
     </div>
 </div>
 <?php include template('footer');?>

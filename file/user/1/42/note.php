@@ -1,0 +1,1 @@
+<?php exit;?>欢迎使用DESTOON B2B网站管理系统www.destoon.com

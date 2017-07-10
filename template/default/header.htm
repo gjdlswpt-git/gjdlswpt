@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset={DT_CHARSET}"/>
+    <title>{if $seo_title}{$seo_title}{else}{if $head_title}{$head_title}{$DT[seo_delimiter]}{/if}{if $city_sitename}{$city_sitename}{else}{$DT[sitename]}{/if}{/if}</title>
+    {if $head_keywords}
+    <meta name="keywords" content="{$head_keywords}"/>
+    {/if}
+    {if $head_description}
+    <meta name="description" content="{$head_description}"/>
+    {/if}
+    {if $head_mobile}
+    <meta http-equiv="mobile-agent" content="format=xhtml; url={$head_mobile}">
+    <meta http-equiv="mobile-agent" content="format=html5; url={$head_mobile}">
+    {/if}
+
+    <link rel="shortcut icon" type="image/x-icon" href="{DT_STATIC}favicon.ico"/>
+    <link rel="bookmark" type="image/x-icon" href="{DT_STATIC}favicon.ico"/>
+    {if $head_canonical}
+        <link rel="canonical" href="{$head_canonical}"/>
+    {/if}
+
+    {if $EXT[archiver_enable]}
+        <link rel="archives" title="{$DT[sitename]}" href="{$EXT[archiver_url]}"/>
+    {/if}
+
+    <link rel="stylesheet" type="text/css" href="{DT_SKIN}style.css"/>
+    <link rel="stylesheet" type="text/css" href="{DT_SKIN}style22.css"/>
+    
+
+    {if $moduleid>4}<link rel="stylesheet" type="text/css" href="{DT_SKIN}{$module}.css"/>{/if}
+    {if $CSS}
+        {loop $CSS $css}
+        <link rel="stylesheet" type="text/css" href="{DT_SKIN}{$css}.css"/>
+        {/loop}
+    {/if}
+    <link rel="stylesheet" type="text/css" href="{DT_SKIN}public.css"/>
+    <link rel="stylesheet" type="text/css" href="{DT_SKIN}index.css"/>
+
+    <!--[if lte IE 6]>
+    <link rel="stylesheet" type="text/css" href="{DT_SKIN}ie6.css"/>
+    <![endif]-->
+    {if !DT_DEBUG}<script type="text/javascript">window.onerror=function(){return true;}</script>{/if}
+    <script type="text/javascript" src="{DT_STATIC}lang/{DT_LANG}/lang.js"></script>
+    <script type="text/javascript" src="{DT_STATIC}file/script/config.js"></script>
+    <script type="text/javascript" src="{DT_STATIC}file/script/jquery.js"></script>
+    <script type="text/javascript" src="{DT_STATIC}file/script/common.js"></script>
+    <script type="text/javascript" src="{DT_STATIC}file/script/page.js"></script>
+    <script type="text/javascript" src="{DT_STATIC}file/script/my.js"></script>
+    <script type="text/javascript" src="{DT_STATIC}file/script/fade.js"></script>
+    <script type="text/javascript" src="{DT_STATIC}file/script/floatAd.js"></script>
+    <script type="text/javascript" src="{DT_STATIC}file/script/move.js"></script>
+
+
+    {if $lazy}<script type="text/javascript" src="{DT_STATIC}file/script/jquery.lazyload.js"></script>{/if}
+    {if $JS}
+    {loop $JS $js}
+    <script type="text/javascript" src="{DT_STATIC}file/script/{$js}.js"></script>
+    {/loop}
+    {/if}
+    {php $searchid = ($moduleid > 3 && $MODULE[$moduleid]['ismenu'] && !$MODULE[$moduleid]['islink']) ? $moduleid : 5;}
+    <script type="text/javascript">
+        {if $head_mobile && $EXT[wap_goto]}
+            GoMobile('{$head_mobile}');
+        {/if}
+            var searchid = {$searchid};
+            {if $itemid && $DT[anticopy]}
+                document.oncontextmenu=function(e){return false;};
+                document.onselectstart=function(e){return false;};
+            {/if}
+    </script>
+    <!--[以上为系统关键代码，除非您明确其含义，否则请勿修改或删除，否则会导致系统错误]-->
+    <!--[模板中所有带id的元素，请勿修改或删除，否则会导致部分JS代码无法运行]-->
+    <!--[以上类似的注释，在编译模板时，系统会自动移除，不会显示在实际的页面中]-->
+</head>
+<body style="position:relative;overflow:hidden">
+<!-- 顶部 -->
+<div class="inter_top">
+    <div class="w1000 clear">
+        <div class="inter_top_left" id="destoon_member">
+        </div>
+
+        <div class="inter_top_right">
+            <ul>
+                {if $DT[city]}<span class="s_change">[<em>{$city_name}</em>]<a href="{DT_PATH}api/city.php" title="点击切换城市" rel="nofollow">切换</a></span>{/if}
+                <span><script type="text/javascript">addFav('收藏本页');</script></span>
+                {if $EXT[wap_enable]}<span class="s_phone"><a href="{$EXT[wap_url]}mobile.php">手机版</a></span>{/if}
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+<div class="advert" style="display:none;">
+    <!-- <a href="javascript:void(0)">
+        <img src="{DT_SKIN}image/advert.png" alt="玻尿酸 注射美容" title="玻尿酸 注射美容" width="1000" height="167" />
+    </a> -->
+    {ad(25)}
+</div>
+
+
+
+
+
+<!--头部中间-->
+<div class="inter_header">
+    <div class="w1000 clear">
+        <div class="g_logo"><a href="/" style="width:253px;height:72px;"><img src="{DT_SKIN}image/logo.png" ></a></div>
+
+        <div class="search">
+            <div class="search_box clear">
+                <form id="destoon_search" action="{$MODULE[$searchid][linkurl]}search.php" onsubmit="return Dsearch(1);">
+                    <input type="hidden" name="moduleid" value="5" id="destoon_moduleid"/>
+                    <input type="hidden" name="spread" value="0" id="destoon_spread"/>
+
+
+                    <input name="kw" id="destoon_kw" type="text" class="goods" value="啥都有，你想找点啥" onfocus="if(this.value=='啥都有，你想找点啥'){this.value='';this.style.color='#333';}" onblur="if(this.value==''){this.value='啥都有，你想找点啥';this.style.color='#909090';}" autocomplete="off" x-webkit-speech speech />
+
+
+
+                    <div class="search_list">
+                        <div class="search_list_this">
+                            <input type="text" id="destoon_select" class="search_m" value="供应" readonly onfocus="this.blur();" onclick="$('#search_module').fadeIn('fast');" />
+
+                            <i style="background:url({DT_SKIN}image/bottom_arrow.png) no-repeat;"></i>
+                        </div>
+                    </div>
+
+                    <div class="submit_btn"><input type="submit" id="submit" value="" style="background:url({DT_SKIN}image/search.png) no-repeat center center;"/></div>
+                </form>
+
+
+                <div id="search_module" style="display:none;" onmouseout="Dh('search_module');" onmouseover="Ds('search_module');">
+           {loop $MODULE $m}{if $m[ismenu] && !$m[islink]}
+           <a href="javascript:void(0);" onclick="setModule('{$m[moduleid]}','{$m[name]}')">{$m[name]}</a>{/if}
+           {/loop}
+        </div>
+            </div>
+
+            
+
+            <div class="head_search_kw">
+                <a href="" onclick="Dsearch_adv();return false;"><strong>热搜：</strong></a>
+                <span id="destoon_word">
+                    <!--{php $tags_data=tag("moduleid=$searchid&table=keyword&condition=moduleid=$searchid and status=3&pagesize=6&order=total_search desc&template=list-search_kw")}-->
+                    {loop $tags_data $i $t}
+                        <a href="{$t[linkurl]}"{if $target} target="{$target}"{/if} title="{$t[alt]}">{$t[title]}</a>&nbsp;
+                    {/loop}
+                </span>
+            </div>
+        </div>
+
+
+        <div class="publish"><a href="{$MODULE[2][linkurl]}{$DT[file_my]}" style="background:url({DT_SKIN}image/icon_release.png) no-repeat 16px center;">发布信息</a></div>
+    </div>
+</div>
+
+
+<!-- 导航栏 -->
+<div class="inter_nav">
+    <div class="w1000">
+        <ul>
+            <li class="industry_classify">
+                <span style="background:url({DT_SKIN}image/icon_classify.png) no-repeat 14px center;">
+                <a href="#" onclick="Go('{DT_PATH}sitemap/{rewrite('index.php?mid=5')}');return false;" style="display:block;color:#FFF;font-size:16px;width:75px;margin-left:0;">行业分类</a>
+                </span>
+            </li>
+        </ul>
+        <a id="this" {if $moduleid<2} class="this" {/if} href="{$MODULE[1][linkurl]}"><h2>首页</h2></a>
+        {loop $MODULE $m}
+            {if $m[ismenu]}          
+                <a id="nav_list" href="{$m[linkurl]}" {if $m[isblank]} target="_blank"{/if} {if $m[moduleid]==$moduleid} class="this"{/if}  {if $m[moduleid]==23} rel="nofollow" {/if}>
+                    <h2 {if $m[style]} style="color:{$m[style]};"{/if}>{$m[name]}</h2>
+                </a>
+            {/if}
+            {/loop}
+    </div>
+</div>
+
+
+<hr style="display:block;border-top:2px solid #1C86E5;" />
+
+
+

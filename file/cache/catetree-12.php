@@ -1,1 +1,0 @@
-<option value="141">产品展示</option><option value="142">其他图片</option></select>

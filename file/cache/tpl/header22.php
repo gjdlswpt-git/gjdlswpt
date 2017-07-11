@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta http-equiv="Content-Type" content="text/html;charset=<?php echo DT_CHARSET;?>"/>
-<<<<<<< HEAD
     <title><?php if($seo_title) { ?><?php echo $seo_title;?><?php } else { ?><?php if($head_title) { ?><?php echo $head_title;?><?php echo $DT['seo_delimiter'];?><?php } ?>
 <?php if($city_sitename) { ?><?php echo $city_sitename;?><?php } else { ?><?php echo $DT['sitename'];?><?php } ?>
 <?php } ?>
@@ -17,27 +16,10 @@
     <meta http-equiv="mobile-agent" content="format=xhtml; url=<?php echo $head_mobile;?>">
     <meta http-equiv="mobile-agent" content="format=html5; url=<?php echo $head_mobile;?>">
     <?php } ?>
-=======
-    <title><?php if($seo_title) { ?><?php echo $seo_title;?><?php } else { ?><?php if($head_title) { ?><?php echo $head_title;?><?php echo $DT['seo_delimiter'];?><?php } ?>
-<?php if($city_sitename) { ?><?php echo $city_sitename;?><?php } else { ?><?php echo $DT['sitename'];?><?php } ?>
-<?php } ?>
-</title>
-    <?php if($head_keywords) { ?>
-    <meta name="keywords" content="<?php echo $head_keywords;?>"/>
-    <?php } ?>
-    <?php if($head_description) { ?>
-    <meta name="description" content="<?php echo $head_description;?>"/>
-    <?php } ?>
-    <?php if($head_mobile) { ?>
-    <meta http-equiv="mobile-agent" content="format=xhtml; url=<?php echo $head_mobile;?>">
-    <meta http-equiv="mobile-agent" content="format=html5; url=<?php echo $head_mobile;?>">
-    <?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo DT_STATIC;?>favicon.ico"/>
     <link rel="bookmark" type="image/x-icon" href="<?php echo DT_STATIC;?>favicon.ico"/>
     <?php if($head_canonical) { ?>
         <link rel="canonical" href="<?php echo $head_canonical;?>"/>
-<<<<<<< HEAD
     <?php } ?>
     <?php if($EXT['archiver_enable']) { ?>
         <link rel="archives" title="<?php echo $DT['sitename'];?>" href="<?php echo $EXT['archiver_url'];?>"/>
@@ -46,35 +28,17 @@
     <link rel="stylesheet" type="text/css" href="<?php echo DT_SKIN;?>style22.css"/>
     
     <?php if($moduleid>4) { ?><link rel="stylesheet" type="text/css" href="<?php echo DT_SKIN;?><?php echo $module;?>.css"/><?php } ?>
-=======
-    <?php } ?>
-    <?php if($EXT['archiver_enable']) { ?>
-        <link rel="archives" title="<?php echo $DT['sitename'];?>" href="<?php echo $EXT['archiver_url'];?>"/>
-    <?php } ?>
-    <link rel="stylesheet" type="text/css" href="<?php echo DT_SKIN;?>style.css"/>
-    <link rel="stylesheet" type="text/css" href="<?php echo DT_SKIN;?>style22.css"/>
-    
-    <?php if($moduleid>4) { ?><link rel="stylesheet" type="text/css" href="<?php echo DT_SKIN;?><?php echo $module;?>.css"/><?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
     <?php if($CSS) { ?>
         <?php if(is_array($CSS)) { foreach($CSS as $css) { ?>
         <link rel="stylesheet" type="text/css" href="<?php echo DT_SKIN;?><?php echo $css;?>.css"/>
         <?php } } ?>
-<<<<<<< HEAD
     <?php } ?>
-=======
-    <?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
     <link rel="stylesheet" type="text/css" href="<?php echo DT_SKIN;?>public.css"/>
     <link rel="stylesheet" type="text/css" href="<?php echo DT_SKIN;?>index.css"/>
     <!--[if lte IE 6]>
     <link rel="stylesheet" type="text/css" href="<?php echo DT_SKIN;?>ie6.css"/>
     <![endif]-->
-<<<<<<< HEAD
     <?php if(!DT_DEBUG) { ?><script type="text/javascript">window.onerror=function(){return true;}</script><?php } ?>
-=======
-    <?php if(!DT_DEBUG) { ?><script type="text/javascript">window.onerror=function(){return true;}</script><?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
     <script type="text/javascript" src="<?php echo DT_STATIC;?>lang/<?php echo DT_LANG;?>/lang.js"></script>
     <script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/config.js"></script>
     <script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/jquery.js"></script>
@@ -86,38 +50,22 @@
     <script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/move.js"></script>
     <script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/juheweb.js"></script>
     
-<<<<<<< HEAD
     <?php if($lazy) { ?><script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/jquery.lazyload.js"></script><?php } ?>
-=======
-    <?php if($lazy) { ?><script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/jquery.lazyload.js"></script><?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
     <?php if($JS) { ?>
     <?php if(is_array($JS)) { foreach($JS as $js) { ?>
     <script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/<?php echo $js;?>.js"></script>
     <?php } } ?>
-<<<<<<< HEAD
     <?php } ?>
-=======
-    <?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
     <?php $searchid = ($moduleid > 3 && $MODULE[$moduleid]['ismenu'] && !$MODULE[$moduleid]['islink']) ? $moduleid : 5;?>
     <script type="text/javascript">
         <?php if($head_mobile && $EXT['wap_goto']) { ?>
             GoMobile('<?php echo $head_mobile;?>');
-<<<<<<< HEAD
         <?php } ?>
-=======
-        <?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
             var searchid = <?php echo $searchid;?>;
             <?php if($itemid && $DT['anticopy']) { ?>
                 document.oncontextmenu=function(e){return false;};
                 document.onselectstart=function(e){return false;};
-<<<<<<< HEAD
             <?php } ?>
-=======
-            <?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
     </script>
     
     
@@ -132,15 +80,9 @@
         </div>
         <div class="inter_top_right">
             <ul>
-<<<<<<< HEAD
                 <?php if($DT['city']) { ?><span class="s_change">[<em><?php echo $city_name;?></em>]<a href="<?php echo DT_PATH;?>api/city.php" title="点击切换城市" rel="nofollow">切换</a></span><?php } ?>
                 <span><script type="text/javascript">addFav('收藏本页');</script></span>
                 <?php if($EXT['wap_enable']) { ?><span class="s_phone"><a href="<?php echo $EXT['wap_url'];?>mobile.php">手机版</a></span><?php } ?>
-=======
-                <?php if($DT['city']) { ?><span class="s_change">[<em><?php echo $city_name;?></em>]<a href="<?php echo DT_PATH;?>api/city.php" title="点击切换城市" rel="nofollow">切换</a></span><?php } ?>
-                <span><script type="text/javascript">addFav('收藏本页');</script></span>
-                <?php if($EXT['wap_enable']) { ?><span class="s_phone"><a href="<?php echo $EXT['wap_url'];?>mobile.php">手机版</a></span><?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
             </ul>
         </div>
     </div>
@@ -171,11 +113,7 @@
                 </form>
                 <div id="search_module" style="display:none;" onmouseout="Dh('search_module');" onmouseover="Ds('search_module');">
            <?php if(is_array($MODULE)) { foreach($MODULE as $m) { ?><?php if($m['ismenu'] && !$m['islink']) { ?>
-<<<<<<< HEAD
            <a href="javascript:void(0);" onclick="setModule('<?php echo $m['moduleid'];?>','<?php echo $m['name'];?>')"><?php echo $m['name'];?></a><?php } ?>
-=======
-           <a href="javascript:void(0);" onclick="setModule('<?php echo $m['moduleid'];?>','<?php echo $m['name'];?>')"><?php echo $m['name'];?></a><?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
            <?php } } ?>
         </div>
             </div>
@@ -185,11 +123,7 @@
                 <span id="destoon_word">
                     <?php $tags_data=tag("moduleid=$searchid&table=keyword&condition=moduleid=$searchid and status=3&pagesize=6&order=total_search desc&template=list-search_kw")?>
                     <?php if(is_array($tags_data)) { foreach($tags_data as $i => $t) { ?>
-<<<<<<< HEAD
                         <a href="<?php echo $t['linkurl'];?>"<?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
-=======
-                        <a href="<?php echo $t['linkurl'];?>"<?php if($target) { ?> target="<?php echo $target;?>"<?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
  title="<?php echo $t['alt'];?>"><?php echo $t['title'];?></a>&nbsp;
                     <?php } } ?>
                 </span>
@@ -216,23 +150,15 @@
                     <p>
                         <a href="<?php echo $MODULE[$mid]['linkurl'];?><?php echo $c['linkurl'];?>" target="_blank" style="background:url(<?php echo DT_SKIN;?>image/right_arrow.png) no-repeat 126px center;"><?php echo $c['catname'];?></a>
                     </p>
-<<<<<<< HEAD
                     <?php } ?>
                     <?php } } ?>
                 </div>
                 <?php } ?>
-=======
-                    <?php } ?>
-                    <?php } } ?>
-                </div>
-                <?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
             </li>
         </ul>
         <a class="this" href="<?php echo $MODULE['1']['linkurl'];?>" ><h2>首页</h2></a>
         <?php if(is_array($MODULE)) { foreach($MODULE as $m) { ?>
         <?php if($m['ismenu']) { ?>
-<<<<<<< HEAD
         <a id="nav_list" href="<?php echo $m['linkurl'];?>"<?php if($m['isblank']) { ?> target="_blank"<?php } ?>
  <?php if($m['moduleid']==$moduleid) { ?> class="bg_a"<?php } ?>
  <?php if($m['moduleid']==23) { ?> rel="nofollow" <?php } ?>
@@ -241,16 +167,6 @@
 ><?php echo $m['name'];?></h2>
         </a>
         <?php } ?>
-=======
-        <a id="nav_list" href="<?php echo $m['linkurl'];?>"<?php if($m['isblank']) { ?> target="_blank"<?php } ?>
- <?php if($m['moduleid']==$moduleid) { ?> class="bg_a"<?php } ?>
- <?php if($m['moduleid']==23) { ?> rel="nofollow" <?php } ?>
->
-            <h2 <?php if($m['style']) { ?> style="color:<?php echo $m['style'];?>;"<?php } ?>
-><?php echo $m['name'];?></h2>
-        </a>
-        <?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
         <?php } } ?>
     </div>
 </div>

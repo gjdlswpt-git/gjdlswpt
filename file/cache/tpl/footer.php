@@ -11,21 +11,12 @@
         <a href="/">网站首页</a>
         <em>|</em><a href="<?php echo $MODULE['1']['linkurl'];?>sitemap/">网站地图</a>
         <em>|</em><a href="<?php echo $EXT['spread_url'];?>">排名推广</a>
-<<<<<<< HEAD
         <?php if($EXT['ad_enable']) { ?><em>|</em><a href="<?php echo $EXT['ad_url'];?>">广告服务</a><?php } ?>
         <?php if($EXT['gift_enable']) { ?><em>|</em><a href="<?php echo $EXT['gift_url'];?>">积分换礼</a><?php } ?>
         <?php if($EXT['guestbook_enable']) { ?><em>|</em><a href="<?php echo $EXT['guestbook_url'];?>">网站留言</a><?php } ?>
     </div>
     <div class="p">
         <?php if($DT['icpno']) { ?> | <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow"><?php echo $DT['icpno'];?></a><?php } ?>
-=======
-        <?php if($EXT['ad_enable']) { ?><em>|</em><a href="<?php echo $EXT['ad_url'];?>">广告服务</a><?php } ?>
-        <?php if($EXT['gift_enable']) { ?><em>|</em><a href="<?php echo $EXT['gift_url'];?>">积分换礼</a><?php } ?>
-        <?php if($EXT['guestbook_enable']) { ?><em>|</em><a href="<?php echo $EXT['guestbook_url'];?>">网站留言</a><?php } ?>
-    </div>
-    <div class="p">
-        <?php if($DT['icpno']) { ?> | <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow"><?php echo $DT['icpno'];?></a><?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
  
     </div>
 </div>
@@ -35,13 +26,8 @@
         show_task('<?php echo $destoon_task;?>');
     <?php } else { ?>
         <?php include DT_ROOT.'/api/task.inc.php';?>
-<<<<<<< HEAD
     <?php } ?>
     <?php if($lazy) { ?>$(function(){$("img").lazyload();});<?php } ?>
-=======
-    <?php } ?>
-    <?php if($lazy) { ?>$(function(){$("img").lazyload();});<?php } ?>
->>>>>>> 416c16f68a92a9ab88e5cf6ea222070e22545ddf
     $('#back2top').click(function(){
         $("html, body").animate({scrollTop:0}, 200);
     });

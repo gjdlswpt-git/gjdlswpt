@@ -48,8 +48,6 @@
     <script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/fade.js"></script>
     <script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/floatAd.js"></script>
     <script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/move.js"></script>
-    <script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/juheweb.js"></script>
-    
     <?php if($lazy) { ?><script type="text/javascript" src="<?php echo DT_STATIC;?>file/script/jquery.lazyload.js"></script><?php } ?>
     <?php if($JS) { ?>
     <?php if(is_array($JS)) { foreach($JS as $js) { ?>
@@ -67,7 +65,6 @@
                 document.onselectstart=function(e){return false;};
             <?php } ?>
     </script>
-    
     
     
     
@@ -140,33 +137,21 @@
                 <span style="background:url(<?php echo DT_SKIN;?>image/icon_classify.png) no-repeat 14px center;">
                 <a href="#" onclick="Go('<?php echo DT_PATH;?>sitemap/<?php echo rewrite('index.php?mid=5');?>');return false;" style="display:block;color:#FFF;font-size:16px;width:75px;margin-left:0;">行业分类</a>
                 </span>
-                
-                <?php if($DT['page_catalog']) { ?>
-                <div class="industry_list">
-                    <?php $mid = 5;?>
-                    <?php $child = get_maincat(0, $mid, 1);?>
-                    <?php if(is_array($child)) { foreach($child as $i => $c) { ?>
-                    <?php if($i<=12) { ?>
-                    <p>
-                        <a href="<?php echo $MODULE[$mid]['linkurl'];?><?php echo $c['linkurl'];?>" target="_blank" style="background:url(<?php echo DT_SKIN;?>image/right_arrow.png) no-repeat 126px center;"><?php echo $c['catname'];?></a>
-                    </p>
-                    <?php } ?>
-                    <?php } } ?>
-                </div>
-                <?php } ?>
             </li>
         </ul>
-        <a class="this" href="<?php echo $MODULE['1']['linkurl'];?>" ><h2>首页</h2></a>
+        <a id="this" <?php if($moduleid<2) { ?> class="this" <?php } ?>
+ href="<?php echo $MODULE['1']['linkurl'];?>"><h2>首页</h2></a>
         <?php if(is_array($MODULE)) { foreach($MODULE as $m) { ?>
-        <?php if($m['ismenu']) { ?>
-        <a id="nav_list" href="<?php echo $m['linkurl'];?>"<?php if($m['isblank']) { ?> target="_blank"<?php } ?>
- <?php if($m['moduleid']==$moduleid) { ?> class="bg_a"<?php } ?>
- <?php if($m['moduleid']==23) { ?> rel="nofollow" <?php } ?>
+            <?php if($m['ismenu']) { ?>          
+                <a id="nav_list" href="<?php echo $m['linkurl'];?>" <?php if($m['isblank']) { ?> target="_blank"<?php } ?>
+ <?php if($m['moduleid']==$moduleid) { ?> class="this"<?php } ?>
+  <?php if($m['moduleid']==23) { ?> rel="nofollow" <?php } ?>
 >
-            <h2 <?php if($m['style']) { ?> style="color:<?php echo $m['style'];?>;"<?php } ?>
+                    <h2 <?php if($m['style']) { ?> style="color:<?php echo $m['style'];?>;"<?php } ?>
 ><?php echo $m['name'];?></h2>
-        </a>
-        <?php } ?>
-        <?php } } ?>
+                </a>
+            <?php } ?>
+            <?php } } ?>
     </div>
 </div>
+<hr style="display:block;border-top:2px solid #1C86E5;" />

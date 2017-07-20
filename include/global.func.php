@@ -844,7 +844,7 @@ function userurl($username, $qstring = '', $domain = '') {
 				}
 			}
 		} else if($DT['rewrite']) {
-			$URL = DT_PATH.'com/'.$username.'/';
+			$URL = DT_PATH.'company/'.$username.'/';
 			if($qstring) {
 				parse_str($qstring, $q);
 				if(isset($q['file'])) {

@@ -198,7 +198,7 @@
                         <li style="float: left;padding:0 3px ">
                             <div style="display: inline-block;margin: 5px 10px">
                                 <a href="{$t[linkurl]}" {if $target} target="{$target}" {/if}><img style="border: 1px solid #ccc" src="{$t[thumb]}" alt="{$t[title]}" width="128" height="98"/>
-                                    <p style="text-align: center;font-size: 14px">{$t[title]}</p></a>
+                                    <p style="text-align: center;font-size: 14px">{dsubstr($t[title], 15, '')}</p></a>
                             </div>
                         </li>
                         {/loop}

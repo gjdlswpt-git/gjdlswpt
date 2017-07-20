@@ -1,1 +1,1 @@
-document.write('<a href="/" target="_blank"><img src="http://www.gjdlswpt.com/file/upload/201610/27/13-13-04-47-1.png" width="192" height="120" alt=""/></a>');
+document.write('<a href="http://www.gjdlswpt.com/buy/201704/18/buy_info_125.html" target="_blank"><img src="http://www.gjdlswpt.com/file/upload/201610/27/13-13-04-47-1.png" width="192" height="120" alt=""/></a>');

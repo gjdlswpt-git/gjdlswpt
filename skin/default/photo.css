@@ -14,5 +14,88 @@
 .count_b {font-size:20px;}
 .photo_all {padding:10px;}
 .photo_all div {color:#F1F1F1;padding:2px 10px 2px 12px;text-align:left;}
-#cursor_a {position:absolute;z-index:1000;width:400px;cursor:url('image/prev.cur'),default;}
-#cursor_b {position:absolute;z-index:1000;width:400px;cursor:url('image/next.cur'),default;margin-left:400px;}
+#cursor_a {position:absolute;z-index:1000;width:500px;height:400px;cursor:url('image/prev.cur'),default;}
+#cursor_b {position:absolute;z-index:1000;width:500px;height:400px;cursor:url('image/next.cur'),default;margin-left:500px;}
+.prevBtn {position: absolute;width: 18px;height: 60px;top: 23px}
+.nextBtn {position: absolute;width: 18px;height: 60px;top: 23px;left: 980px}
+.prevBtn img,.nextBtn img {height: 60px;width: 16px}
+
+
+#action_item {float: right;}
+.action_xiayiji .action_icon{ background-position:-58px -226px}
+.action_xiayiji .action_prev{ background-position:-58px -199px}
+.action_fenji .action_icon{ background-position:-170px -168px}
+.action_item{ float:left; height:82px}
+.action_item .action_item_main{ display:block; height:62px; width:88px; border:solid #FFF; border-width:1px 1px 0; padding-top:20px; text-align:center; _padding-top:19px; cursor:pointer;}
+.action_item .action_icon{ display:inline-block; width:24px; height:24px; cursor:pointer}
+.action_item .action_prev{ display:inline-block; width:24px; height:24px; cursor:pointer}
+.action_item .action_icon_txt{ display:block; height:21px; margin-top:2px; cursor:pointer}
+.action_item_hover .action_item_main .action_icon_txt{ color:#E63737}
+.action_item_hover .action_item_main{ position:relative; height:72px; border-color:#E63737; background-color:#f5f5f5; z-index:100; _padding-top:20px}
+.action_info,.action_fav,.action_unlike{ border:dotted #D9D9D9; _border:solid #EEE; border-width:0 1px}
+.action_info .action_icon{ background-position:-102px -22px}
+.arrow{ display:inline-block; width:0; height:0; overflow:hidden; border:4px dashed transparent; border-left:4px solid #7D7D7D}
+.alpha{ overflow:hidden; height:20px; width:100%; background:rgba(0,0,0,.3); filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#33000000,endColorstr=#33000000)}
+.detail_s1 .detail_cnt ul li{  float:left; width:132px; height:28px; line-height:28px; overflow:hidden;margin-top:10px; border-bottom:#FFD7C4 dotted 1px; padding-left:25px;background:url(./image/bullet_v.gif) no-repeat 0 50%;}
+.container{ padding-top:20px; font-family:'hiragino sans gb','\5FAE\8F6F\96C5\9ED1'; font-size:14px}
+.container a:link,.container a:visited{ color:#333}
+
+.intro_item{ height:auto; width:100%;}
+
+.label_item{ float:left; width:100%; word-break:break-all; word-wrap:break-word}
+.label_item .label_tab{ float:left; margin-right:12px}
+
+.mainplay{ width:1000px; margin:auto; background-color:#FFF}
+.main_player{ position:relative; width:1000px; height:466px; margin-bottom:20px;}
+
+.play_player{position:absolute; top:0; left:0;height:565px; width:1000px;z-index:999}
+.play_info{ position:relative; z-index:100}
+.play_info,.play_main{ float:left; width:655px;}
+.play_action_active .play_action_main{ border-bottom:1px solid #E63737}
+.play_action_btn{ position:absolute; top:10px;width: 100%}
+.play_action_main{ position:relative; height:92px; padding-top:10px; border-top:1px dotted #CCC; border-bottom:1px solid #CACACA; _border-top:1px solid #EEE; z-index:100}
+.play_action .action_item_cnt{ overflow:hidden; padding:20px 10px; color:#7D7D7D; z-index:10}
+.play_side{ float:right; width:336px}
+.play_side .playmod_bd{ border-top:2px solid #E53738; background-color:#f5f5f5}
+.playmod_hd,.playmod_bd,.playmod_ft{ *zoom:1}
+.playmod_hd{ margin-bottom:16px}
+.playmod_hd:after,.playmod_bd:after,.playmod_ft:after{ visibility:hidden; display:block; height:0; clear:both; content:"."}
+.ply2 s{ opacity:.6; filter:alpha(opacity=60)}
+.ply2 s {
+    background-position: -93px -207px
+}
+
+.tab_vlist .playmod_hd_tab{ float:left}
+.tab_vlist .tabs_nav,.xiu .tabs_nav{ height:22px; line-height:22px; font-size:20px}
+.tab_vlist .tabs_nav .current,.xiu .tabs_nav .current,.tab_vlist .tabs_nav .current a:link,.xiu .tabs_nav .current a:link,.tab_vlist .tabs_nav .current a:visited,.xiu .tabs_nav .current a:visited{ color:#E63737}
+.tab_vlist .tabs_nav .nav_item,.xiu .tabs_nav .nav_item{ position:relative; float:left; margin-right:33px; _display:inline}
+.tab_vlist .tabs_nav .nav_item h2,.xiu .tabs_nav .nav_item h2{ float:left; cursor:pointer}
+.tab_vlist .playmod_bd{  font-size: 14px; border-top:2px solid #E53738}
+.tab_vlist .vlist{ margin-left:-34px}
+.tab_vlist .vlist .vitem{ margin:20px 0 0 30px}
+.tab_vlist .tabs_nav .cur_arrow,.xiu .tabs_nav .cur_arrow{ position:absolute; left:50%; bottom:-18px; display:none; overflow:hidden; width:13px; height:9px; margin-left:-7px; background-position:-212px -105px}
+.tab_vlist .tabs_nav .current .cur_arrow,.xiu .tabs_nav .current .cur_arrow{ display:block}
+
+.user_info{ width:120px; padding-top:5px; position:absolute; left:0; top:10px; z-index:300}
+.user_info .user_cover{ position:relative; float:left; height:72px; width:102px}
+.user_info .user_cover_img{ height:70px; width:100px; border:1px solid #CACACA}
+.user_info .user_cover .arrow{ position:absolute; right:-8px; top:30px; border-left-color:#CACACA}
+
+.video_title{ position:relative; margin-bottom:15px; font-size:15px; z-index:200}
+.video_title_main{ float:left; overflow:hidden; width:690px; white-space:nowrap; text-overflow:ellipsis}
+.vlist{ *zoom:1}
+.vlist .vitem{ position:relative; float:left; overflow:hidden; width:140px; line-height:1.3em; _display:inline}
+.vlist .vcover{ position:relative; display:block; overflow:hidden; width:140px; height:84px; margin-bottom:10px}
+.vlist .vcover_img{ width:140px}
+.vlist .alpha{ position:absolute; left:0; bottom:0; line-height:20px}
+.vlist .vcover:link .alpha,.vlist .vcover:visited .alpha,.vlist .vcover:hover .alpha{ color:#FFF; font-size:12px}
+.vlist .ply2 s{ margin-left:5px}
+.vlist .vtitle{ overflow:hidden; max-height:36px; word-break:break-all; word-wrap:break-word; _height:36px}
+.vlist_s1{ margin:-17px 0 0 -20px; font-size:0; letter-spacing:-0.4em}
+.vlist_s1 .vitem{ float:none; display:inline-block; margin:17px 0 0 20px; font-size:14px; letter-spacing:normal; vertical-align:top; *display:inline; *zoom:1}
+.vlist_s2 a.alpha{ bottom:auto; top:94px; font-size:12px}
+
+.zl01,.zl02,.zl03,.zl04,.zl05,.zl06,.xply_btn_ico,.cur_arrow,.xname_tit i,.view_stats_btn,.action_icon,.user_rss_num,.view_stats_arrow,.app_code_logo,.ican_logo,.radio_icon,.fav_add_btn,.fav_add_btn i,.success_tips i,.no_album_icon,.fav_login_btn,.user_v,.user_z,.tool_btn_icon,.ctrl_icon,.switch_btn_s1,.switch_btn_s2,.v_stats_icon,.intera_msg_ico,.express_widget_ico,.express_dialog_close,.express_vote .vote_radio,.pgc_verify,.action_dialog_close,.play_action_dialog .tips_icon{ background:url(./image/play_bg_v.4.png) no-repeat}
+
+:root .alpha{ filter:none\9}
+:root .alpha{ filter:none\9}

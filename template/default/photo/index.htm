@@ -8,7 +8,7 @@
 				<div style="float: left">
 				<!--{php $tags=tag("moduleid=$moduleid&condition=status=3 and open=3 and level=1 and items>0&areaid=$cityid&order=".$MOD[order]."&pagesize=1&width=300&height=225&target=_blank&template=null");}-->
 					{loop $tags $i $t}
-					<a href="$t[linkurl]}" {if $target} target="{$target}"{/if}><img src="{$t[thumb]}" width="302" height="224" alt="{$t[alt]} ({$t[items]})"/></a>
+					<a href="{$t[linkurl]}" {if $target} target="{$target}"{/if}><img src="{$t[thumb]}" width="302" height="224" alt="{$t[alt]} ({$t[items]})"/></a>
 					{/loop}
 				</div>
 				<div style="float: right;width: 430px;">
@@ -39,16 +39,6 @@
 		{if $MOD[page_islide]}
 		<div style="display: none"><!--{tag("moduleid=$moduleid&condition=status=3 and open=3 and level=2 and items>0&areaid=$cityid&order=".$MOD[order]."&pagesize=".$MOD[page_islide]."&width=300&height=225&target=_blank&template=slide")}--></div>
 		{/if}
-		<!--<div class="box_head"><div><strong>按分类浏览</strong></div></div>
-		<div class="box_body">
-		<table width="100%" cellpadding="3">
-		{loop $maincat $k $v}
-		{if $k%2==0}<tr>{/if}
-		<td><a href="{$MOD[linkurl]}{$v[linkurl]}">{set_style($v[catname],$v[style])}</a>{if !$cityid} <span class="f_gray px10">({$v[item]})</span>{/if}</td>
-		{if $k%2==1}</tr>{/if}
-		{/loop}
-		</table>
-		</div>-->
 		<div class="box_head"><div><strong>资讯点击排行</strong></div></div>
 		<div class="box_body">
 		<div class="rank_list"><!--{tag("moduleid=21&condition=status=3 and addtime>$today_endtime-30*86400&areaid=$cityid&order=hits desc&pagesize=15&target=_blank")}--></div>

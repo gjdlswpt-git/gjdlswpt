@@ -4,6 +4,7 @@
 <div class="m_l f_l">
 	<div class="left_box">
 		<div class="pos">当前位置: <a href="{$MODULE[1][linkurl]}">首页</a> &raquo; <a href="{$MOD[linkurl]}">{$MOD[name]}</a> &raquo; {cat_pos($CAT, ' &raquo; ')} &raquo; 正文</div>
+
 		<h1 class="title" id="title">{$title}</h1>
 		<div class="info"><span class="f_r"><img src="{DT_SKIN}image/zoomin.gif" width="16" height="16" alt="放大字体" class="c_p" onclick="fontZoom('+');"/>&nbsp;&nbsp;<img src="{DT_SKIN}image/zoomout.gif" width="16" height="16"  alt="缩小字体" class="c_p" onclick="fontZoom('-');"/></span>
 		发布日期：{$adddate}
@@ -16,14 +17,10 @@
 		<div class="t_c"><strong class="f_red">特别提示：</strong>本信息由相关企业自行提供，真实性未证实，仅供参考。请谨慎采用，风险自负。</div>
 		<br/><br/>
 		<center>
-		[ <a href="{$MOD[linkurl]}search.php" rel="nofollow">{$MOD[name]}搜索</a> ]&nbsp;
 		[ <a href="javascript:SendFav();">加入收藏</a> ]&nbsp;
 		[ <a href="javascript:SendPage();">告诉好友</a> ]&nbsp;
-		[ <a href="javascript:Print();">打印本文</a> ]&nbsp;
 		[ <a href="javascript:window.close()">关闭窗口</a> ]
 		</center>
-		<br/>
-		{template 'comment', 'chip'}
 		<br/>
 	</div>
 </div>

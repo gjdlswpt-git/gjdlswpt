@@ -20,10 +20,6 @@
         <link rel="canonical" href="{$head_canonical}"/>
     {/if}
 
-    {if $EXT[archiver_enable]}
-        <link rel="archives" title="{$DT[sitename]}" href="{$EXT[archiver_url]}"/>
-    {/if}
-
     <link rel="stylesheet" type="text/css" href="{DT_SKIN}style.css"/>
     <link rel="stylesheet" type="text/css" href="{DT_SKIN}style22.css"/>
     
@@ -79,14 +75,6 @@
     <div class="w1000 clear">
         <div class="inter_top_left" id="destoon_member">
         </div>
-
-        <div class="inter_top_right">
-            <ul>
-                {if $DT[city]}<span class="s_change">[<em>{$city_name}</em>]<a href="{DT_PATH}api/city.php" title="点击切换城市" rel="nofollow">切换</a></span>{/if}
-                <span><script type="text/javascript">addFav('收藏本页');</script></span>
-                {if $EXT[wap_enable]}<span class="s_phone"><a href="{$EXT[wap_url]}mobile.php">手机版</a></span>{/if}
-            </ul>
-        </div>
     </div>
 </div>
 
@@ -102,11 +90,10 @@
 
 
 
-
 <!--头部中间-->
 <div class="inter_header">
     <div class="w1000 clear">
-        <div class="g_logo"><a href="/" style="width:253px;height:72px;"><img src="{DT_SKIN}image/logo.png" ></a></div>
+        <div class="g_logo"><a href="/" style="width:253px;height:72px;"><img src="{DT_SKIN}image/logo.png" alt="电缆网-电线电缆专业网-国际电缆商务平台"></a></div>
 
         <div class="search">
             <div class="search_box clear">

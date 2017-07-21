@@ -57,13 +57,8 @@
                 <li style="padding-bottom:5px "><div style="border: 1px solid #cccccc;width: 200px;height: auto;border-radius:15px;">
                 	<h3 style="border: 1px solid #cccccc;width: 200px;height: 25px;font-size: 15px;text-align: center;font-weight: 500;border-radius: 15px;background: #cccccc;color:33336e;font-weight: 600;">最新资讯</h3>
                 	<ul>
-                        <!--{tag("moduleid=$moduleid&condition=status=3 and addtime>$today_endtime-30*86400&areaid=$cityid&order=hits desc&pagesize=10")}-->
-                            {loop $tags $i $t}
-                            <li style="padding-bottom: 10px ;font-size:13px">
-                                <span class="points"><i style=""></i></span>
-                                <a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}">{dsubstr($t[title], 50, '')}</a><span style="float: right;">点击量[{$t[hits]}]</span>
-                            </li>
-                            {/loop}
+                        <!--{tag("moduleid=$moduleid&condition=status=3 and addtime>$today_endtime-30*86400&areaid=$cityid&order=hits desc&pagesize=15")}-->
+                            
                         </ul>
                         <img src="{DT_SKIN}image/200-65（01）.png" style="width: 200px;height: 65px;">
                     </li>

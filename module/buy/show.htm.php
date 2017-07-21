@@ -17,7 +17,7 @@ if($CP) {
 	$values = property_value($moduleid, $itemid);
 }
 $adddate = timetodate($addtime, 5);
-$editdate = timetodate($edittime, 5);
+$editdate = timetodate($edittime,5);
 $todate = $totime ? timetodate($totime, 3) : 0;
 $expired = $totime && $totime < $DT_TIME ? true : false;
 $fileurl = $linkurl;

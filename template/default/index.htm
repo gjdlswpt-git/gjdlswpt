@@ -5,9 +5,9 @@
 <!-- 轮播图 -->
 <div class="banner">
     <ul class="slideul">
-        <li><a href="javascript:void(0);"><img src="{DT_SKIN}image/banner03.png" alt="工业电缆" title="工业电缆" width="1920" height="456" /></a></li>
-        <li><a href="javascript:void(0);"><img src="{DT_SKIN}image/banner02.png" alt="工业电缆" title="工业电缆" width="1920" height="456" /></a></li>
-        <li><a href="javascript:void(0);"><img src="{DT_SKIN}image/banner01.png" alt="工业电缆" title="工业电缆" width="1920" height="456" /></a></li>
+        <li><a href="javascript:void(0);"><img src="{DT_SKIN}image/banner03.png" alt="国际电缆商务平台" width="1920" height="456" /></a></li>
+        <li><a href="javascript:void(0);"><img src="{DT_SKIN}image/banner02.png" alt="电缆网-质量可靠 值得信赖" width="1920" height="456" /></a></li>
+        <li><a href="javascript:void(0);"><img src="{DT_SKIN}image/banner01.png" alt="电线电缆专业网-行业领军者" width="1920" height="456" /></a></li>
     </ul>
     <div class="slidelist">
         <ul></ul>
@@ -19,13 +19,13 @@
     <div class="w1000 clear">
         <ul>
             <li>
-                <a href="#" target="_blank"><img src="{DT_SKIN}image/ad05.png" alt="电缆护套"></a>
+                <a href="#" target="_blank"><img src="{DT_SKIN}image/ad05.png" alt="电缆网"></a>
             </li>
             <li>
-                <a href="#" target="_blank"><img src="{DT_SKIN}image/ad01.png" alt="橡套电缆"></a>
+                <a href="#" target="_blank"><img src="{DT_SKIN}image/ad01.png" alt="电线电缆专业网"></a>
             </li>
             <li>
-                <a href="#" target="_blank" rel="nofollow"><img src="{DT_SKIN}image/ad06.png" alt="电线电缆价格"></a>
+                <a href="#" target="_blank" rel="nofollow"><img src="{DT_SKIN}image/ad06.png" alt="电线电缆专业网"></a>
             </li>
         </ul>
     </div>
@@ -43,7 +43,7 @@
                             {loop $tags $i $t}
                             <li style="float: left">
                                 <div style="display: inline-block;margin: 5px 10px">
-                                    <a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}"><img style="border: 1px solid #ccc" src="{$t[thumb]}" width="140" height="50"/>
+                                    <a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}"><img style="border: 1px solid #ccc" src="{$t[thumb]}" alt="{$t[title]}" width="140" height="50"/>
                                     <p style="text-align: center">{$t[title]}</p></a>
                                 </div>
                             </li>
@@ -71,9 +71,9 @@
                     </div>
                     <div style="float: right">
                         <ul>
-                            <li style="padding-bottom:5px "><a href="#"><img src="{DT_SKIN}image/200-65（01）.png" width="200" height="65" /></a></li>
-                            <li style="padding-bottom:5px "><a href="#"><img src="{DT_SKIN}image/200-65（02）.png" width="200" height="65" /></a></li>
-                            <li style="padding-bottom:5px "><a href="#"><img src="{DT_SKIN}image/200-65（03）.png" width="200" height="65" /></a></li>
+                            <li style="padding-bottom:5px "><a href="#"><img src="{DT_SKIN}image/200-65（01）.png" alt="有实力 称第一-电缆网" width="200" height="65" /></a></li>
+                            <li style="padding-bottom:5px "><a href="#"><img src="{DT_SKIN}image/200-65（02）.png" alt="华达电缆" width="200" height="65" /></a></li>
+                            <li style="padding-bottom:5px "><a href="#"><img src="{DT_SKIN}image/200-65（03）.png" alt="红星电缆-电线电缆专业网" width="200" height="65" /></a></li>
                         </ul>
                     </div>
                 </div>
@@ -91,8 +91,8 @@
                     {/loop}
                  </ul>
                 <div style="width: 92%;margin: 19px 13px">
-                    <span><a href=""><img src="{DT_SKIN}image/125-95（01）.png"  width="125" height="95"/></a></span>
-                    <span style="float: right"><a href=""><img src="{DT_SKIN}image/125-95（02）.png"  width="125" height="95"/></a></span>
+                    <span><a href=""><img src="{DT_SKIN}image/125-95（01）.png" alt="电缆网" width="125" height="95"/></a></span>
+                    <span style="float: right"><a href=""><img src="{DT_SKIN}image/125-95（02）.png" alt="电线电缆专业网" width="125" height="95"/></a></span>
                 </div>
             </div>
         </div>
@@ -139,7 +139,7 @@
                         <!--{php $tags=tag("moduleid=5&condition=status=3&areaid=$cityid&pagesize=10&datetype=2&target=_blank&order=addtime desc&template=null")}-->
                         {loop $tags $i $t}
                         <li style="padding: 6px 10px;font-size: 14px">
-                            <span class="points"><i></i></span><a href="{$t[linkurl]}" {if $target} target="{$target}"{/if}>{dsubstr($t[title], 26, '...')}</a><span style="float: right">[{date('Y-m-d', $t[addtime])}]</span>
+                            <span class="points"><i></i></span><a href="{$t[linkurl]}" {if $target} target="{$target}"{/if}>{dsubstr($t[title], 32, '...')}</a><span style="float: right">[{date('Y-m-d', $t[addtime])}]</span>
                         </li>
                         {/loop}
                     </ul>
@@ -150,14 +150,14 @@
                       <!--{php $tags=tag("moduleid=6&condition=status=3&areaid=$cityid&pagesize=10&datetype=2&target=_blank&order=addtime desc&template=null")}-->
                         {loop $tags $i $t}
                         <li style="padding: 6px 10px;font-size: 14px">
-                            <span class="points"><i></i></span><a href="{$t[linkurl]}" {if $target} target="{$target}"{/if}>{dsubstr($t[title], 26, '...')}</a><span style="float: right">[{date('Y-m-d', $t[addtime])}]</span>
+                            <span class="points"><i></i></span><a href="{$t[linkurl]}" {if $target} target="{$target}"{/if}>{dsubstr($t[title], 30, '...')}</a><span style="float: right">[{date('Y-m-d', $t[addtime])}]</span>
                         </li>
                         {/loop}
                     </ul>
                 </div>
 
             <div style="width: 330px;height: 350px;float: right;margin-left: 10px;border: 1px solid #ccc">
-                <h2 class="inter_center_header" style="height: 31px;line-height: 31px;padding: 0 10px 0 10px;font-size: 14px;background: #F3F8FC url(skin/default/image/box_head_bg.gif) repeat-x;"><span class="ac this">招商管理</span><!-- &nbsp;<span class="ac">企业招商</span> --><span style="color: #FF660D;float: right">[我要加入]</span></h2>
+                <h2 class="inter_center_header" style="height: 31px;line-height: 31px;padding: 0 10px 0 10px;font-size: 14px;background: #F3F8FC url(skin/default/image/box_head_bg.gif) repeat-x;"><span class="ac this">推荐招商</span>&nbsp;<!-- <span class="ac">企业招商</span> --><span style="color: #FF660D;float: right">[我要加入]</span></h2>
                 <!--推荐招商-->
                 <div class="inter_center_list01">
                     <ul>
@@ -206,13 +206,13 @@
                  </div>
             </div>
             <div style="width:330px;height: 315px;border: 1px solid #ccc;float: right">
-                <h2 style="height: 31px;line-height: 31px;padding: 0 10px 0 10px;background: #E8F2FC url(skin/default/image/box_head_bg.gif) repeat-x;"><span style="display: inline-block;margin-top: 5px;border: 1px solid #ccc;border-radius: 5px 5px 0 0;width:65px;height: 25px;text-align: center;border-bottom: none;background: #fff;font-size: 14px">电缆知识</span><span style="float: right;font-weight: normal"><a href="{$MODULE[10][linkurl]}">MORE >></a></span></h2>
+                <h2 style="height: 31px;line-height: 31px;padding: 0 10px 0 10px;background: #E8F2FC url(skin/default/image/box_head_bg.gif) repeat-x;"><span style="display: inline-block;margin-top: 5px;border: 1px solid #ccc;border-radius: 5px 5px 0 0;width:65px;height: 25px;text-align: center;border-bottom: none;background: #fff;font-size: 14px;margin-top: 2px;">电缆知识</span><span style="float: right;font-weight: 600;font-size: 14px;"><a href="{$MODULE[10][linkurl]}">[求知更多]</a></span></h2>
                 <div style="padding:15px 5px 15px 5px">
                     <ul>
                         <!--{php $tags=tag("moduleid=10&condition=status=3 and process>=0 and credit>=0&pagesize=11&order=addtime desc&template=null");}-->
                         {loop $tags $i $t}
                         <li style="padding-bottom: 5px ;font-size:14px">
-                            <span class="points"><i></i></span><!--<span style="color: #FF660D">[照明样本]&nbsp;</span>-->
+                            <span class="points"><i></i></span>
                             <a href="{$t[linkurl]}">{dsubstr($t[title], 45, '...')}</a>
                         </li>
                         {/loop}
@@ -231,38 +231,35 @@
     <div style="width: 1000px;margin: 20px auto">
         <div  style="width: 655px;float: left">
             <div style="width: 320px;height: 400px;border: 1px solid #ccc;float: left">
-                <div style="padding: 8px 10px;"><h2 style="font-size: 15px">合作企业</h2><h2 style="float: right;padding-top: 6px;margin-top: -23px;"> <a href="{$MODULE[4][linkurl]}">MORE>></a></h2></div>
-                <hr style="width:95%;margin: 3px auto;border: 1px solid #ccc;"/>
+                <div style="padding: 2px 10px;"><h2 style="border-bottom: 2px solid #1388CE;height: 31px;line-height: 31px;padding: 0 10px 0 10px;background: #F3F8FC url(skin/default/image/box_head_bg.gif) repeat-x;"><span style="display:inline-block;width: 75px;text-align: center;height: 25px;line-height:25px;background: #1388CE;border-radius: 5px 5px 0 0;margin-top: 6px;color: #fff">合 作 企 业</span><span style="float: right;text-align: center;width: 15px;height: 15px;line-height:15px;border: 1px solid #1388CE;border-radius: 3px 3px 3px 3px;margin: 8px -10px;"><a href="{$MODULE[4][linkurl]}">+</a></span></h2></div>
                 <div class="inter_right_word">
                     <!--{php $tags=tag("moduleid=4&condition=vip>0 and catids<>''&areaid=$cityid&pagesize=5&order=fromtime desc&template=null")}-->
-                    <h3>{$tags[0][company]}</h3>
-                    <h2 style="margin-left: 40px;">经营模式：{$tags[0][type]}</h2>
-                    <h2 style="margin-left: 40px;">电话号码：{$tags[0][telephone]}</h2>
-                    <div class="inter_right_pic">
-                        <a href="{$tags[0][linkurl]}"><img src="{$tags[0][thumb]}" alt="{$tags[0][company]}" title="{$tags[0][company]}" width="250" height="104" /></a>
-                    </div>
-                    <div class="inter_right_list">
-                        <ul>
-                            <!--{php $tags=tag("moduleid=4&condition=vip>0 and catids<>''&areaid=$cityid&pagesize=5&order=fromtime desc&template=null")}-->
-                            {loop $tags $t}
-
-                            <li><i></i><a href="{$t[linkurl]}" target="_blank">{$t[company]}</a></li>
-                            {/loop}
-                            {if $showpage && $pages}<div class="pages">{$pages}</div>{/if}
-                        </ul>
-                    </div>
+                    <h3>武汉恒星红旗电线电缆</h3>
+                    <h2 style="margin-left: 40px;">经营模式：个体经营</h2>
+                    <h2 style="margin-left: 40px;">电话号码：027-88875922</h2>
+                   <div class="inter_right_pic">
+<a href="http://www.gjdlswpt.com/com/gjdlswpt/"><img src="http://www.gjdlswpt.com/file/upload/201704/21/09-55-58-26-1.jpg" alt="武汉恒星红旗电线电缆" title="武汉恒星红旗电线电缆" width="250" height="104"/></a>
+</div>
+<div class="inter_right_list">
+<ul>
+<li><i></i><a href="http://www.gjdlswpt.com/com/gjdlswpt/" target="_blank">武汉恒星红旗电线电缆</a></li>
+<li><i></i><a href="http://www.gjdlswpt.com/com/dff123/" target="_blank">江西华新电线电缆有限公司</a></li>
+<li><i></i><a href="http://www.gjdlswpt.com/com/dsdj123/" target="_blank">上海玖开电线电缆有限公司</a></li>
+<li><i></i><a href="http://www.gjdlswpt.com/com/djd123/" target="_blank">深圳市艾鹏网络科技有限公司</a></li>
+<li><i></i><a href="http://www.gjdlswpt.com/com/dfh123/" target="_blank">深圳市兴和弘五金机电有限公司</a></li>
+</ul>
+</div>
                 </div>
             </div>
             <div style="width: 320px;height: 400px;border: 1px solid #ccc;float: right">
-                <div style="padding: 8px 10px;"><h2 style="font-size: 15px">企业招聘</h2><h2 style="float: right;padding-top: 6px;margin-top: -23px;"><a href="{$MODULE[9][linkurl]}">MORE>></a></h2></div>
-                <hr style="width:95%;margin: 3px auto;border: 1px solid #ccc;"/>
+                <div style="padding: 2px 10px;"><h2 style="border-bottom: 2px solid #1388CE;height: 31px;line-height: 31px;padding: 0 10px 0 10px;background: #F3F8FC url(skin/default/image/box_head_bg.gif) repeat-x;"><span style="display:inline-block;width: 75px;text-align: center;height: 25px;line-height:25px;background: #1388CE;border-radius: 5px 5px 0 0;margin-top: 6px;color: #fff">企 业 招 聘</span><span style="float: right;text-align: center;width: 15px;height: 15px;line-height:15px;border: 1px solid #1388CE;border-radius: 3px 3px 3px 3px;margin: 8px -10px;"><a href="{$MODULE[9][linkurl]}">+</a></span></h2></div>
                 <div>
                     <ul>
-                        <!--{php $tags=tag("moduleid=9&condition=status=3 and level>0&pagesize=13&length=30&order=edittime desc&template=null");}-->
+                        <!--{php $tags=tag("moduleid=9&condition=status=3 and level>0&pagesize=12&length=30&order=edittime desc&template=null");}-->
                         {loop $tags $i $t}
-                        <li style="padding: 5px 10px;font-size: 14px;">
+                        <li style="padding: 5px 10px;font-size: 15px;">
                             <span class="points"><i></i></span>
-                             <a href="{$t[linkurl]}">{$t[title]}</a><span style="float: right;font-size: 14px;">[{date('Y-m-d', $t[addtime])}]</span>
+                             <a href="{$t[linkurl]}">{dsubstr($t[title],26,'')}</a><span style="float: right;font-size: 14px;">[{date('Y-m-d', $t[addtime])}]</span>
                         </li>
                         {/loop}
                     </ul>
@@ -270,12 +267,12 @@
             </div>
         </div>
         <div style="width: 330px;height: 400px;border: 1px solid #ccc;float: right;font-size: 14px">
-            <h2 style="height: 31px;line-height: 31px;padding: 0 10px 0 10px;background: #F3F8FC url(skin/default/image/box_head_bg.gif) repeat-x;"><span style="display: inline-block;margin-top: 5px;border: 1px solid #ccc;border-radius: 5px 5px 0 0;width:65px;height: 25px;text-align: center;border-bottom: none;background: #fff;">展会活动</span><span style="float: right;color: #FF660D"><a href="http://gjdlswpt.cn/member/my.php">[我要发布]</a></span></h2>
+            <h2 style="height: 31px;line-height: 31px;padding: 0 10px 0 10px;background: #F3F8FC url(skin/default/image/box_head_bg.gif) repeat-x;"><span style="display: inline-block;margin-top: 5px;border: 1px solid #ccc;border-radius: 5px 5px 0 0;width:65px;height: 25px;text-align: center;border-bottom: none;background: #fff;margin-top: 2px;">展会活动</span><span style="float: right;color: #FF660D"><a href="http://gjdlswpt.cn/member/my.php">[我要发布]</a></span></h2>
             <div>
                 <!--{php $tags=tag("moduleid=8&condition=status=3 and level=1&areaid=$cityid&pagesize=5&order=".$MOD[order]."&template=null");}-->
                 {loop $tags $i $t}
                 <ul style="padding: 8px 10px;">
-                    <li style="font-weight: bold"><span class="points"><i></i></span><a href="{$t[linkurl]}" target="_blank" title="{$t[alt]}" style="font-weight: 400;">展会主题：{dsubstr($t[title], 33, '...')}</a></li>
+                    <li style="font-weight: bold"><span class="points"><i></i></span><a href="{$t[linkurl]}" target="_blank" title="{$t[alt]}" style="font-weight: 400;">展会主题：{dsubstr($t[title], 36, '...')}</a></li>
                     <li>开展时间：{timetodate($t[fromtime], 3)} 至 {timetodate($t[totime], 3)}</li>
                     <li>开展地区： [{$t[city]}]</li>
                     <li title="{$t[city]}{$t[hallname]}">主办方名：{dsubstr($t[sponsor],35,'')}</li>

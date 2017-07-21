@@ -162,7 +162,7 @@ i {font-style:normal;}
 .inter_right_list li i {width:4px;height:4px;background-color:#babbbc;display:block;position:absolute;top:50%;left:6px;margin-top:-2px;}
 .inter_right_list li:hover a {color:#1c86e5;}
 .inter_right_list li:hover i {background-color:#1c86e5;}
-.recommend_header {height:36px;line-height:36px;font-size:16px;color:#1c86e5;text-indent:10px;border-bottom:solid 1px #7a7a7a;margin-bottom:20px;}
+.recommend_header {height:36px;line-height:36px;font-size:16px;color:#1c86e5;text-indent:10px;border-bottom:solid 1px #7a7a7a;margin-bottom:20px;font-weight: 800;}
 .recommend_header a {font-family:"SimSun";font-size:12px;color:#909090;float:right;padding-right:10px;}
 .recommend_header a:hover {color:#1c86e5;}
 .recommend .w1000 {overflow:hidden;}

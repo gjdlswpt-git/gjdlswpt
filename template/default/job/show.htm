@@ -49,7 +49,7 @@
 		</tr>
 		<tr bgcolor="#FFFFFF">
 		<td>&nbsp;更新日期</td>
-		<td>&nbsp;{$editdate}</td>
+		<td>&nbsp;{$adddate}</td>
 		<td>&nbsp;有效期至</td>
 		<td>&nbsp;{$todate}{if $expired}<span class="f_red">[已过期]</span>{/if}</td>
 		</tr>
@@ -59,15 +59,13 @@
 		<div class="content" id="content">{$content}</div>
 		<div class="b10">&nbsp;</div>		
 		{if $CP}{template 'property', 'chip'}{/if}
-		<br/>
 		{if $username}
-		<center>
+		<!-- <center>
 		<img src="{DT_SKIN}image/job_apply.gif" width="160" height="37" alt="申请该职位" class="c_p" onclick="Go('{$MOD[linkurl]}{rewrite('apply.php?itemid='.$itemid)}');"/>
 		&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 		<img src="{DT_SKIN}image/job_fav.gif" width="160" height="37" alt="收藏该职位" class="c_p" onclick="SendFav();"/>
 		{/if}
-		</center>
-		<br/>
+		</center> -->
 
 		{if $com_intro}
 		<div class="left_head">公司介绍</div>
@@ -81,9 +79,9 @@
 		[ <a href="javascript:Print();">打印本文</a> ]&nbsp;
 		[ <a href="javascript:window.close()">关闭窗口</a> ]
 		</center>
-		<br/>
+	<!-- 	<br/>
 		{template 'comment', 'chip'}
-		<br/>
+		<br/> -->
 	</div>
 </div>
 <div class="m_n f_l">&nbsp;</div>

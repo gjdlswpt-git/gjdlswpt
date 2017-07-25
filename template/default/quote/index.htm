@@ -1,30 +1,28 @@
 {template 'header'}
-<!--广告位-->
 <div>
-    <div style="width: 1000px;margin: 20px auto">
-        <a href="#"><img src="http://www.gjdlswpt.com/file/upload/201706/16/10-20-00-23-1.png" /></a>
+    <div style="width: 1000px;margin: 0 auto;border: 1px solid #ccc">
+       <a href="#"><img src="http://www.gjdlswpt.com/file/upload/201706/16/10-20-00-23-1.png" /></a>
     </div>
 </div>
-<!--广告位end-->
 
-<div style="width:980px;height: 50px;border: 2px solid #1d87e6;margin:0 auto;color: #1234a2;font-size: 14px;">
+
+<div style="width:1000px;height: 50px;border: 1px solid #1d87e6;margin:10px auto;color: #1234a2;font-size: 14px;">
     <div>
     {if $MOD[page_icat]}
 		{loop $maincat $i $c}
 		{if $i%2==0}<tr>{/if}
-			<a href="{$t[linkurl]}" target="_blank" style="border:1px solid white;width: 200px;height: 30px;padding-right: 100px;font-size: 16px;font-weight: 600;">{$c[catname]}</a>			
+			<a href="{$t[linkurl]}" target="_blank" style="border:1px solid white;width: 200px;height: 30px;padding-right: 100px;font-size: 16px;font-weight: 600;">{$c[catname]}</a>
 		</td>
 		{if $i%2==0}<td>&nbsp;</td>{/if}
 		{if $i%2==1}</tr>{/if}
 		{/loop}
 		</table>
 		{/if}
-                
+
     </div>
 </div>
-<div style="width:980px;margin:0 auto;">
-	<img src="{DT_SKIN}image/zi.jpg">
-
+<div style="width:1000px;margin:0 auto;">
+    <img src="{DT_SKIN}image/zi.jpg"/>
             <div style="padding: 15px 0;width:760px;display: inline-block;">
                 <ul>
                 <!--{php $tags=tag("moduleid=7&condition=status=3&areaid=$cityid&pagesize=30&datetype=2&order=addtime desc&target=_blank&template=null");}-->
@@ -58,7 +56,7 @@
                 	<h3 style="border: 1px solid #cccccc;width: 200px;height: 25px;font-size: 15px;text-align: center;font-weight: 500;border-radius: 15px;background: #cccccc;color:33336e;font-weight: 600;">最新资讯</h3>
                 	<ul>
                         <!--{tag("moduleid=$moduleid&condition=status=3 and addtime>$today_endtime-30*86400&areaid=$cityid&order=hits desc&pagesize=15")}-->
-                            
+
                         </ul>
                         <img src="{DT_SKIN}image/200-65（01）.png" style="width: 200px;height: 65px;">
                     </li>
@@ -67,7 +65,7 @@
             </div>
         </div>
             </div>
-        </div>  
+        </div>
 <!--广告位-->
 <div>
     <div style="width: 1000px;margin: 20px auto">

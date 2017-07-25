@@ -1,13 +1,99 @@
-<div class="main_head"><div><span class="f_r"><a href="{userurl($username, 'file=introduce', $domain)}"><img src="{DT_STATIC}{$MODULE[4][moduledir]}/image/more.gif" title="更多"/></a></span><strong>{$main_name[$HM]}</strong></div></div>
-<div class="main_body">
-	<div class="lh18 px13 pd10">
-	{if $video}
-	{load('player.js')}
-	<div style="width:250px;height:210px;text-align:right;float:right;"><script type="text/javascript">document.write(player('{$video}',240,200,'',1));</script></div>
-	{else}
-	<img src="{$COM[thumb]}" align="right" style="margin:5px 0 5px 10px;padding:5px;border:#C0C0C0 1px solid;"/>
-	{/if}
-	{$COM[intro]} [<a href="{userurl($username, 'file=introduce', $domain)}" class="t">详细介绍</a>]
-	<div class="c_b"></div>
-	</div>
-</div>
+{load('all.css')}
+<div class="cen-b">
+            <div class="cen-b-a">
+                <div class="cen-b-a-a">
+                    <span><a href="{userurl($username, 'file=photo', $domain)}"><img src="{DT_STATIC}{$MODULE[4][moduledir]}/image/more.gif" title="更多"/></a></span>企业概况 <font style="color: #990000;">Company Profile</font></div>         
+                <div class="cen-b-a-b">
+                {if $video}
+                {load('player.js')}
+                <div style="width:250px;height:210px;text-align:right;float:right;"><script type="text/javascript">document.write(player('{$video}',120,100,'',1));</script></div>
+                {else}
+                <img src="{$COM[thumb]}" align="right" style="width: 98px;height: 102px;"/>
+                {/if}
+                {dsubstr($COM[intro],300,'...')} [<a href="{userurl($username, 'file=introduce', $domain)}" class="t">详细介绍</a>]
+                </div>                  
+            </div>
+            <div class="cen-b-b">
+                <div class="cen-b-a-a">
+                    <span><a href="{userurl($username, 'file=photo', $domain)}"><img src="{DT_STATIC}{$MODULE[4][moduledir]}/image/more.gif" title="更多"/></a></span>公司新闻 <font style="color: #990000;">News &amp; Events</font></div>
+                <div class="cen-b-b-b">                   
+                            <div class="cen-b-b-a">
+                                <ul>
+                            <!--{php $tags=tag("moduleid=7&condition=status=3&areaid=$cityid&pagesize=7&datetype=2&order=addtime desc&target=_blank&template=null")}-->
+                            {loop $tags $i $t}
+                            <li>
+                                <a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}">{dsubstr($t[title], 30, '...')}</a>
+                                <span style="float: right">[{date('Y-m-d', $t[addtime])}]</span>
+                            </li>
+                            {/loop}
+                        </ul>                       
+                </div>
+            </div>
+            <div style="margin-left: 361px;width: 231px;margin-top: -106px;">                
+                <p style="margin-top: -46px;position: absolute;font-weight: 700;color: #333333">联系方式<font style="color: #990000;margin-left: 120px;font-weight: 700;">Content</font></p>
+                <div style="margin-top: -174px;width: 227px;">
+                <span>公司名称：{$COM[company]}</span><br/>
+                <span>公司类型：{$COM[type]} ({$COM[mode]})</span><br/>
+                <span>经营范围：{$COM[business]}</span><br/>
+                <span>注册年份：{$COM[regyear]}</span><br/>
+                <span>经营模式：{$COM[mode]}</span><br/>
+                </div>
+                    
+            </div>
+        </div>
+
+        <div style="float: left;margin-top: 300px;"><hr/>
+            <div>
+                <span><a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}" style="float: right;"><img src="{DT_STATIC}{$MODULE[4][moduledir]}/image/more.gif" title="更多"/></a></span>产品中心 <font style="color: #990000;font-weight: 700;">Product Center</font></a></div>
+        <style>
+            * { margin: 0; padding: 0;}
+            #div1{ width: 100%; height:250px; position: relative; margin: 0 auto;overflow: hidden;}
+            #div1 ul { width:100%; height: 150px; position: relative; }
+            #div1 ul li { height: 180px; float: left; list-style: none;}
+            #div1 ul li img { width: 160px; height: 120px; display: inline-block;margin-top: 8px;}
+            a{ color: #B4B4B4; }
+        </style>
+        <script type="text/javascript">
+            window.onload=function(){
+                var odiv = document.getElementById('div1');
+                var oul = odiv.getElementsByTagName('ul')[0];
+                var ali = oul.getElementsByTagName('li');
+                var spa = -2;               
+                oul.innerHTML=oul.innerHTML+oul.innerHTML;
+                oul.style.width=ali[0].offsetWidth*ali.length+'px';
+                function move(){
+                    if(oul.offsetLeft<-oul.offsetWidth/2){
+                        oul.style.left='0';
+                    }
+                    if(oul.offsetLeft>0){
+                        oul.style.left=-oul.offsetWidth/2+'px'
+                    }
+                    oul.style.left=oul.offsetLeft+spa+'px';
+                }
+                var timer = setInterval(move,30)
+                
+                odiv.onmousemove=function(){clearInterval(timer);}
+                odiv.onmouseout=function(){timer = setInterval(move,30)};
+                document.getElementsByTagName('a')[0].onclick = function(){spa=-2;}
+                document.getElementsByTagName('a')[1].onclick = function(){spa=2;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="div1">
+        <ul>
+        <!--{php $tags=tag("moduleid=5&length=36&condition=status=3 and level>0 and thumb<>''&areaid=$cityid&pagesize=14&order=addtime desc&width=100&height=100&cols=5&target=_blank&original=$original&template=null")}-->
+            {loop $tags $i $t}
+            <li>
+            <div>
+                <a href="{$t[linkurl]}"{if $target} target="{$target}"{/if}>
+                <img src="{$t[thumb]}"/>
+                </a><br><br>
+                <span style="color:block;font-weight: 800;font-size: 14px;">{dsubstr($t[title],20,'')}</span><p>{timetodate($addtime, 3)}</p></div>
+            </li>
+            {/loop} 
+                <div class="main_body">
+
+            </ul>           
+        </div>

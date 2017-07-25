@@ -35,7 +35,6 @@ if(window.location.href.indexOf('{DT_DOMAIN}') != -1){document.domain = '{DT_DOM
 {if $css}<style type="text/css">{$css}</style>{/if}
 </head>
 <body{if $bgcolor || $background} style="background:{if $bgcolor}{$bgcolor}{/if}{if $background}url('{$background}') no-repeat center 0{/if};"{/if}>
-<div class="m"><div class="top" id="top"><a href="{$COM[linkurl]}" title="{$COM[company]}" rel="sidebar" onclick="window.external.addFavorite(this.href, this.title);return false;">收藏本页</a> | <a href="{$COM[linkurl]}" onclick="javascript:try{this.style.behavior='url(#default#homepage)';this.setHomePage(location.href);}catch(e){}return false;">设为主页</a> | <a href="javascript:Go(DTTour);">随便看看</a>{if $EXT[wap_enable]} | <a href="javascript:Go('{$EXT[wap_url]}index.php?moduleid=4&username={$username}');">手机版</a>{/if}</div></div>
 <div class="m">
 <div class="sign">
 {if $COM[vip]}
@@ -50,16 +49,6 @@ if(window.location.href.indexOf('{DT_DOMAIN}') != -1){document.domain = '{DT_DOM
 <h1>{$COM[company]}</h1>
 <h4>{dsubstr($COM['business'], $logo ? 60 : 80, '...')}</h4>
 </div>
-</div>
-</div>
-<div class="m">
-<div class="menu" id="menu"{if count($MENU)>8} style="height:60px;"{/if}>
-	<ul>
-	<li class="{if $file=='homepage'}menu_on{else}menu_li{/if}"><a href="{$COM[linkurl]}"><span>网站首页</span></a></li>
-	{loop $MENU $k $v}
-	<li class="{if $file==$menu_file[$k]}menu_on{else}menu_li{/if}"><a href="{$v[linkurl]}"><span>{$v[name]}</span></a></li>
-	{/loop}
-	</ul>
 </div>
 </div>
 {if $bannert || $banner}
@@ -92,8 +81,5 @@ document.write('<embed src="{DT_PATH}file/flash/slide.swf" wmode="opaque" FlashV
 <div class="m">
 <table cellpadding="0" cellspacing="0" width="100%">
 <tr>
-{if $side_pos==0}
-<td width="{$side_width}" valign="top" id="side">{template 'side', $template}</td>
-<td width="10" id="split"></td>
-{/if}
+
 <td valign="top" id="main">

@@ -1,4 +1,5 @@
 {load('all.css')}
+<script type="text/javascript" src="{DT_STATIC}file/script/jquery-1.7.1.min.js"></script>
 <div class="cen-b">
             <div class="cen-b-a">
                 <div class="cen-b-a-a">
@@ -15,7 +16,7 @@
             </div>
             <div class="cen-b-b">
                 <div class="cen-b-a-a">
-                    <span><a href="{userurl($username, 'file=photo', $domain)}"><img src="{DT_STATIC}{$MODULE[4][moduledir]}/image/more.gif" title="更多"/></a></span>公司新闻 <font style="color: #990000;">News &amp; Events</font></div>
+                    <span><a href="{userurl($username, 'file=photo', $domain)}"><img src="{DT_STATIC}{$MODULE[7][moduledir]}/image/more.gif"/></a></span>公司新闻 <font style="color: #990000;">News &amp; Events</font></div>
                 <div class="cen-b-b-b">                   
                             <div class="cen-b-b-a">
                                 <ul>
@@ -34,7 +35,7 @@
                 <div style="margin-top: -174px;width: 227px;">
                 <span>公司名称：{$COM[company]}</span><br/>
                 <span>公司类型：{$COM[type]} ({$COM[mode]})</span><br/>
-                <span>经营范围：{$COM[business]}</span><br/>
+                <span>经营范围：{dsubstr($COM[business],96,'')}</span><br/>
                 <span>注册年份：{$COM[regyear]}</span><br/>
                 <span>经营模式：{$COM[mode]}</span><br/>
                 </div>
@@ -42,15 +43,14 @@
             </div>
         </div>
 
-        <div style="float: left;margin-top: 300px;"><hr/>
-            <div>
-                <span><a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}" style="float: right;"><img src="{DT_STATIC}{$MODULE[4][moduledir]}/image/more.gif" title="更多"/></a></span>产品中心 <font style="color: #990000;font-weight: 700;">Product Center</font></a></div>
+        <script type="text/javascript" src="{DT_STATIC}file/script/jquery-1.7.1.min.js"></script>
+        <meta charset="utf-8">
         <style>
             * { margin: 0; padding: 0;}
-            #div1{ width: 100%; height:250px; position: relative; margin: 0 auto;overflow: hidden;}
+            #div1{ width: 100%; height:300px; position: relative; margin: 0 auto;overflow: hidden;}
             #div1 ul { width:100%; height: 150px; position: relative; }
             #div1 ul li { height: 180px; float: left; list-style: none;}
-            #div1 ul li img { width: 160px; height: 120px; display: inline-block;margin-top: 8px;}
+            #div1 ul li img { width: 200px; height: 200px; display: inline-block;margin-top: 8px;}
             a{ color: #B4B4B4; }
         </style>
         <script type="text/javascript">
@@ -74,26 +74,26 @@
                 
                 odiv.onmousemove=function(){clearInterval(timer);}
                 odiv.onmouseout=function(){timer = setInterval(move,30)};
-                document.getElementsByTagName('a')[0].onclick = function(){spa=-2;}
-                document.getElementsByTagName('a')[1].onclick = function(){spa=2;
+                document.getElementsByTagName('a')[0].onclick = function(){
+                    spa=-2;
+                }
+                document.getElementsByTagName('a')[1].onclick = function(){
+                    spa=2;
                 }
             }
         </script>
-    </head>
-    <body>
         <div id="div1">
-        <ul>
-        <!--{php $tags=tag("moduleid=5&length=36&condition=status=3 and level>0 and thumb<>''&areaid=$cityid&pagesize=14&order=addtime desc&width=100&height=100&cols=5&target=_blank&original=$original&template=null")}-->
+            <ul>
+            <!--{php $tags=tag("moduleid=12&condition=status=3 and addtime>$today_endtime-300*86400 and thumb<>''&areaid=$cityid&order=hits desc&pagesize=8&template=null");}-->
             {loop $tags $i $t}
+            
             <li>
-            <div>
+                <div>
                 <a href="{$t[linkurl]}"{if $target} target="{$target}"{/if}>
                 <img src="{$t[thumb]}"/>
                 </a><br><br>
-                <span style="color:block;font-weight: 800;font-size: 14px;">{dsubstr($t[title],20,'')}</span><p>{timetodate($addtime, 3)}</p></div>
-            </li>
-            {/loop} 
-                <div class="main_body">
-
+                <a href="{$t[linkurl]}"><span style="color:block;font-weight: 800;font-size: 14px;">{dsubstr($t[title],20,'')}</span></a><p>{timetodate($addtime, 3)}</p></div>
+                </li>
+             {/loop} 
             </ul>           
         </div>

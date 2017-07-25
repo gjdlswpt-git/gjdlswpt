@@ -1,5 +1,4 @@
 # Robots For DESTOON B2B
-User-agent: *
 Disallow: /
 Disallow: /api/
 Disallow: /install/

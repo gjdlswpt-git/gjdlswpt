@@ -1,0 +1,83 @@
+{template 'header'}
+<div>
+    <div style="width: 1000px;margin: 0 auto;border: 1px solid #ccc">
+       <a href="#"><img src="http://www.gjdlswpt.com/file/upload/201706/16/10-20-00-23-1.png" /></a>
+    </div>
+</div>
+
+
+<div style="width:1000px;height: 50px;border: 1px solid #1d87e6;margin:10px auto;color: #1234a2;font-size: 14px;">
+    <div>
+    {if $MOD[page_icat]}
+		{loop $maincat $i $c}
+		{if $i%2==0}<tr>{/if}
+			<a href="{$t[linkurl]}" target="_blank" style="border:1px solid white;width: 200px;height: 30px;padding-right: 100px;font-size: 16px;font-weight: 600;">{$c[catname]}</a>
+		</td>
+		{if $i%2==0}<td>&nbsp;</td>{/if}
+		{if $i%2==1}</tr>{/if}
+		{/loop}
+		</table>
+		{/if}
+
+    </div>
+</div>
+<div style="width:1000px;margin:0 auto;">
+    <img src="{DT_SKIN}image/zi.jpg"/>
+            <div style="padding: 15px 0;width:760px;display: inline-block;">
+                <ul>
+                <!--{php $tags=tag("moduleid=7&condition=status=3&areaid=$cityid&pagesize=30&datetype=2&order=addtime desc&target=_blank&template=null");}-->
+                {loop $tags $i $t}
+                <li style="padding-bottom: 10px ;font-size:13px">
+
+                <a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}">{dsubstr($t[title], 50, '...')}</a>
+                <span style="float: right">发布时间：[{date('Y-m-d', $t[addtime])}] &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp浏览量：[{$t[hits]}]</span>
+                </li>
+                {/loop}
+                </ul>
+                </div>
+                <div style="float: right">
+                <ul>
+                <li style="padding-bottom:5px ">
+                <div style="border: 1px solid #cccccc;width:200px;height: auto;border-radius: 14px;">
+                	<h3 style="border: 1px solid #cccccc;width: 200px;height: 25px;font-size: 15px;text-align: center;font-weight: 500;border-radius: 14px;background: #cccccc;color:33336e;font-weight: 600;">本周热点</h3>
+               			<ul>
+                            <!--{php $tags=tag("moduleid=7&condition=status=3&areaid=$cityid&pagesize=8&datetype=2&order=addtime desc&target=_blank&template=null")}-->
+                            {loop $tags $i $t}
+                            <li style="padding-bottom: 10px ;font-size:13px">
+                                *<a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}">{dsubstr($t[title], 28, '')}</a>
+                               <!--  <span style="float: right">[{date('Y-m-d', $t[addtime])}]</span> -->
+                            </li>
+                            {/loop}
+                        </ul>
+                        <img src="{DT_SKIN}image/200-65（02）.png" style="width: 200px;height: 65px;">
+               	</div>
+                </li>
+                <li style="padding-bottom:5px "><div style="border: 1px solid #cccccc;width: 200px;height: auto;border-radius:15px;">
+                	<h3 style="border: 1px solid #cccccc;width: 200px;height: 25px;font-size: 15px;text-align: center;font-weight: 500;border-radius: 15px;background: #cccccc;color:33336e;font-weight: 600;">最新资讯</h3>
+                	<ul>
+                        <!--{tag("moduleid=$moduleid&condition=status=3 and addtime>$today_endtime-30*86400&areaid=$cityid&order=hits desc&pagesize=15")}-->
+                        </ul>
+                        <img src="{DT_SKIN}image/200-65（01）.png" style="width: 200px;height: 65px;">
+                    </li>
+                <li style="padding-bottom:5px "><a href="#"><img src="{DT_SKIN}image/200-65（03）.png" width="200" height="65" /></a></li>
+                </ul>
+            </div>
+        </div>
+            </div>
+        </div>
+<!--广告位-->
+<div>
+    <div style="width: 1000px;margin: 20px auto">
+        <a href="#"><img src="http://www.gjdlswpt.com/file/upload/201706/16/10-20-00-23-1.png" /></a>
+    </div>
+</div>
+<!--广告位end-->
+
+{template 'footer'}
+
+
+
+
+
+
+

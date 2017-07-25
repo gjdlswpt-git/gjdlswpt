@@ -1,84 +1,121 @@
 {template 'header'}
-<div>
-    <div style="width: 1000px;margin: 0 auto;border: 1px solid #ccc">
-       <a href="#"><img src="http://www.gjdlswpt.com/file/upload/201706/16/10-20-00-23-1.png" /></a>
-    </div>
-</div>
+<div class="m">
+	<div class="m_l f_l">
+		<div>
+			<div class="pos">当前位置: <a href="{DT_PATH}">首页</a>
+				&raquo; <a href="{$MOD[linkurl]}">{$MOD[name]}</a>
+				{if $typeid!=99}&raquo; <a href="{$MOD[linkurl]}{rewrite('index.php?typeid='.$typeid)}">{$TYPE[$typeid]}</a>{/if}
+				{if $catid}&raquo; {cat_pos($CAT, ' &raquo; ')}{/if}
+			</div>
+			<div style="height: 54px;border: 1px solid #39A5F0;box-shadow:#39A5F0 0 0 3px;margin-top: 15px;padding: 5px">
+				<ul>
+					{if $MOD[page_icat]}
+					{loop $maincat $i $c}
+					<li style="float: left;width: 125px"><a href="{$c[linkurl]}">{$c[catname]}</a></li>
+					{/loop}
+					{/if}
+				</ul>
+			</div>
+			<div>
+				<div style="border-bottom: 2px solid #39A5F0;margin-top: 15px"><span style="display: inline-block;width: 75px;height: 25px;line-height:25px;background: #39A5F0;border-radius: 5px 5px 0 0;color: #fff;font-size: 14px;text-align: center;margin-left: 20px">全部资讯</span></div>
+				<div style="border: 1px solid #ccc;border-top: none;padding: 0 10px">
+					<!--{php $tags=tag("moduleid=$moduleid&condition=status=3 &areaid=$cityid&order=addtime desc&pagesize=".$MOD[pagesize]."&datetype=5&page=$page&showpage=1&fields=".$MOD[fields]."&template=list-quote_product")}-->
+					<!--<ul>
+						{loop $tags $i $t}
+						<li style="padding: 10px 10px;border-bottom: #cccccc 1px dotted"><a href="{$t[linkurl]}">{dsubstr($t[title], 50, '')}<span style="float: right">发布时间：{date('Y-m-d', $t[addtime])}<span style="display: inline-block;width: 50px"></span>浏览量：{$t[hits]}</span></a></li>
+						{/loop}
+					</ul>-->
+				</div>
+			</div>
+			<!--<div class="table">
+			&lt;!&ndash;{php $tags=tag("table=quote_product&condition=1&areaid=$cityid&pagesize=20&order=edittime desc&length=16&template=null");}&ndash;&gt;
+				{if $tags}
+				<div class="table_list">				
+				<span class="s1">品名</span>
+				<span class="s2">价格</span>
+				<span class="s3">单位</span>
+				<span class="s4">报价数</span>
+				</div>
+				<div id="quoteup">
+				{loop $tags $i $t}
+				<p>
+					<span class="s1"><a href="{$MOD[linkurl]}{rewrite('price.php?itemid='.$t['itemid'])}" target="_blank" title="{$t[alt]}" class="b">{$t[title]}</a></span>
+					<span class="f_red">￥{$t[price]}</span>
+					<span class="s3" >{$t[unit]}</span>
+					<span class="s4">{$t[item]}</span>
+				</p>
+				{/loop}
+				</div>
+				{/if}
+				<div class="b10"></div>
+				<center><a href="{$MOD[linkurl]}product.php" title="{$t[alt]}">查看所有产品报价&raquo;</a></center>
+			</div>
+			<div class="hot">
+				&lt;!&ndash; <div class="headline"></div> &ndash;&gt;
+				<div class="box_head"><strong>最新热点</strong></div>
+				<div class="subline" style="border:1px solid #ccc">
+				&lt;!&ndash;{tag("moduleid=$moduleid&condition=status=3 and level=1&areaid=$cityid&order=".$MOD[order]."&pagesize=5&datetype=2&target=_blank")}&ndash;&gt;
+				</div>	
+			</div>
+			<div style="clear:both"></div>-->
+		</div>
 
 
-<div style="width:1000px;height: 50px;border: 1px solid #1d87e6;margin:10px auto;color: #1234a2;font-size: 14px;">
-    <div>
-    {if $MOD[page_icat]}
+		<div class="c_b"></div>
+		<div class="b10"></div>
+		{if $MOD[page_icat]}
+		<!--<div >
 		{loop $maincat $i $c}
-		{if $i%2==0}<tr>{/if}
-			<a href="{$t[linkurl]}" target="_blank" style="border:1px solid white;width: 200px;height: 30px;padding-right: 100px;font-size: 16px;font-weight: 600;">{$c[catname]}</a>
-		</td>
-		{if $i%2==0}<td>&nbsp;</td>{/if}
-		{if $i%2==1}</tr>{/if}
+		{if $i%2==0}<div>{/if}	
+			<div  class="box">
+				<div class="box_head"><span class="f_r"><a href="{$MOD[linkurl]}{$c[linkurl]}">更多&raquo;</a></span><strong>{$c[catname]}</strong></div>
+				<div class="box_body li_dot f_gray">&lt;!&ndash;{tag("moduleid=$moduleid&catid=".$c[catid]."&areaid=$cityid&condition=status=3&order=".$MOD[order]."&pagesize=".$MOD[page_icat]."&datetype=2&target=_blank")}&ndash;&gt;</div>
+			</div>			
+		{if $i%2==0}<span class="s5"></span>{/if}
+		{if $i%2==1}</div>{/if}
 		{/loop}
-		</table>
+		</div>-->
 		{/if}
-
-    </div>
+	</div>
+	<div class="m_n f_l">&nbsp;</div>
+	<div class="m_r f_l">
+		<div class="box_head"><div><strong>本周热点</strong></div></div>
+		<div class="box_body">
+			<div class="rank_list" style="display: none">
+				<!--{tag("moduleid=$moduleid&table=keyword&condition=moduleid=$moduleid and status=3 and updatetime>$today_endtime-86400*7&pagesize=10&order=week_search desc&key=week_search&template=list-search_rank")}-->
+			</div>
+			<div class="rank_list">
+				<!--{tag("moduleid=$moduleid&condition=status=3 and level=1&areaid=$cityid&order=".$MOD[order]."&pagesize=10&datetype=2&target=_blank")}-->
+			</div>
+		</div>
+		<div class="b10 c_b"> </div>
+		<div class="box_head" style="display: none">
+			<!--<div><strong>按分类浏览</strong></div>-->
+		</div>
+		<div class="box_body" style="padding: 0">
+		<div >
+			{loop $maincat $k $v}
+			{if $k%2==0}<p style="display: none">{/if}
+			<span><a href="{$MOD[linkurl]}{$v[linkurl]}">{set_style($v[catname],$v[style])}</a>{if !$cityid} <span class="f_gray px10">({$v[item]})</span>{/if}</span>
+			{if $k%2==1}</p>{/if}
+			{/loop}
+			<img src="{DT_SKIN}image/200-65（02）.png" alt="" width="300" height="130">
+		</div>
+		</div>
+		<div class="b10 c_b">&nbsp;</div>
+		<div class="box_head"><div><strong>最新资讯</strong></div></div>
+		<div class="box_body">
+			<div class="rank_list" style="display: none"><!--{tag("moduleid=$moduleid&condition=status=3 and addtime>$today_endtime-30*86400&areaid=$cityid&order=hits desc&pagesize=10")}--></div>
+			<div class="rank_list" ><!--{tag("moduleid=$moduleid&condition=status=3&areaid=$cityid&order=".$MOD[order]."&pagesize=10&datetype=2&target=_blank")}--></div>
+		</div>
+		<div class="b10 c_b">&nbsp;</div>
+		<div class="box_body" style="padding: 0">
+			<img src="{DT_SKIN}image/200-65（01）.png" alt="" width="300" height="130">
+		</div>
+	</div>
 </div>
-<div style="width:1000px;margin:0 auto;">
-    <img src="{DT_SKIN}image/zi.jpg"/>
-            <div style="padding: 15px 0;width:760px;display: inline-block;">
-                <ul>
-                <!--{php $tags=tag("moduleid=7&condition=status=3&areaid=$cityid&pagesize=30&datetype=2&order=addtime desc&target=_blank&template=null");}-->
-                {loop $tags $i $t}
-                <li style="padding-bottom: 10px ;font-size:13px">
-
-                <a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}">{dsubstr($t[title], 50, '...')}</a>
-                <span style="float: right">发布时间：[{date('Y-m-d', $t[addtime])}] &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp浏览量：[{$t[hits]}]</span>
-                </li>
-                {/loop}
-                </ul>
-                </div>
-                <div style="float: right">
-                <ul>
-                <li style="padding-bottom:5px ">
-                <div style="border: 1px solid #cccccc;width:200px;height: auto;border-radius: 14px;">
-                	<h3 style="border: 1px solid #cccccc;width: 200px;height: 25px;font-size: 15px;text-align: center;font-weight: 500;border-radius: 14px;background: #cccccc;color:33336e;font-weight: 600;">本周热点</h3>
-               			<ul>
-                            <!--{php $tags=tag("moduleid=7&condition=status=3&areaid=$cityid&pagesize=8&datetype=2&order=addtime desc&target=_blank&template=null")}-->
-                            {loop $tags $i $t}
-                            <li style="padding-bottom: 10px ;font-size:13px">
-                                *<a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}">{dsubstr($t[title], 28, '')}</a>
-                               <!--  <span style="float: right">[{date('Y-m-d', $t[addtime])}]</span> -->
-                            </li>
-                            {/loop}
-                        </ul>
-                        <img src="{DT_SKIN}image/200-65（02）.png" style="width: 200px;height: 65px;">
-               	</div>
-                </li>
-                <li style="padding-bottom:5px "><div style="border: 1px solid #cccccc;width: 200px;height: auto;border-radius:15px;">
-                	<h3 style="border: 1px solid #cccccc;width: 200px;height: 25px;font-size: 15px;text-align: center;font-weight: 500;border-radius: 15px;background: #cccccc;color:33336e;font-weight: 600;">最新资讯</h3>
-                	<ul>
-                        <!--{tag("moduleid=$moduleid&condition=status=3 and addtime>$today_endtime-30*86400&areaid=$cityid&order=hits desc&pagesize=15")}-->
-
-                        </ul>
-                        <img src="{DT_SKIN}image/200-65（01）.png" style="width: 200px;height: 65px;">
-                    </li>
-                <li style="padding-bottom:5px "><a href="#"><img src="{DT_SKIN}image/200-65（03）.png" width="200" height="65" /></a></li>
-                </ul>
-            </div>
-        </div>
-            </div>
-        </div>
-<!--广告位-->
-<div>
-    <div style="width: 1000px;margin: 20px auto">
-        <a href="#"><img src="http://www.gjdlswpt.com/file/upload/201706/16/10-20-00-23-1.png" /></a>
-    </div>
-</div>
-<!--广告位end-->
-
+{load('marquee.js')}
+<script type="text/javascript">
+new dmarquee(22, 20, 1000, 'quoteup');
+</script>
 {template 'footer'}
-
-
-
-
-
-
-

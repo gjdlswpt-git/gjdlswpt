@@ -142,7 +142,7 @@ a.g:hover {color:#FF6600;}
 .f_white {color:white;}
 .f_gray {color:#666666;}
 .f_orange {color:#FF6600;}
-.f_red {color:red;width: 65px;display: inline-block;border-right: 1px solid #ccc;text-align: center;}
+.f_red {color:red;width: 65px;display: inline-block;text-align: center;}
 .f_green {color:green;}
 .f_blue {color:blue;}
 .f_dblue {color:#225588;}

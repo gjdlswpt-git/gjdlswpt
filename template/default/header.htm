@@ -1,7 +1,7 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta name="baidu-site-verification" content="QTt1QAfrD8" >
+<meta name="baidu-site-verification" content="g7iscgR3hQ" />
     <meta http-equiv="Content-Type" content="text/html;charset={DT_CHARSET}"/>
     <title>{if $seo_title}{$seo_title}{else}{if $head_title}{$head_title}{$DT[seo_delimiter]}{/if}{if $city_sitename}{$city_sitename}{else}{$DT[sitename]}{/if}{/if}</title>
     {if $head_keywords}
@@ -19,6 +19,10 @@
     <link rel="bookmark" type="image/x-icon" href="{DT_STATIC}favicon.ico"/>
     {if $head_canonical}
         <link rel="canonical" href="{$head_canonical}"/>
+    {/if}
+
+    {if $EXT[archiver_enable]}
+        <link rel="archives" title="{$DT[sitename]}" href="{$EXT[archiver_url]}"/>
     {/if}
 
     <link rel="stylesheet" type="text/css" href="{DT_SKIN}style.css"/>
@@ -76,17 +80,23 @@
     <div class="w1000 clear">
         <div class="inter_top_left" id="destoon_member">
         </div>
+
+        <div class="inter_top_right">
+            <ul>
+                {if $DT[city]}<span class="s_change">[<em>{$city_name}</em>]<a href="{DT_PATH}api/city.php" title="点击切换城市" rel="nofollow">切换</a></span>{/if}
+                <span><script type="text/javascript">addFav('收藏本页');</script></span>
+                {if $EXT[wap_enable]}<span class="s_phone"><a href="{$EXT[wap_url]}mobile.php">手机版</a></span>{/if}
+            </ul>
+        </div>
     </div>
 </div>
 
 
 
 <div class="advert" style="display:none;">
-    <!-- <a href="javascript:void(0)">
-        <img src="{DT_SKIN}image/advert.png" alt="玻尿酸 注射美容" title="玻尿酸 注射美容" width="1000" height="167" />
-    </a> -->
     {ad(25)}
 </div>
+
 
 
 
@@ -94,7 +104,7 @@
 <!--头部中间-->
 <div class="inter_header">
     <div class="w1000 clear">
-        <div class="g_logo"><a href="/" style="width:253px;height:72px;"><img src="{DT_SKIN}image/logo.png" alt="电缆网-电线电缆专业网-国际电缆商务平台"></a></div>
+        <div class="g_logo"><a href="/" style="width:253px;height:72px;"><img src="{DT_SKIN}image/logo.png" ></a></div>
 
         <div class="search">
             <div class="search_box clear">

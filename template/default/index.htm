@@ -19,13 +19,13 @@
     <div class="w1000 clear">
         <ul>
             <li>
-                <a target="_blank"><img src="{DT_SKIN}image/ad05.png" alt="电缆网"></a>
+                <a href="#" target="_blank"><img src="{DT_SKIN}image/ad05.png" alt="电缆网"></a>
             </li>
             <li>
-                <a target="_blank"><img src="{DT_SKIN}image/ad01.png" alt="电线电缆专业网" width="210" height="120"></a>
+                <a href="#" target="_blank"><img src="{DT_SKIN}image/ad01.png" alt="电线电缆专业网" width="210" height="120"></a>
             </li>
             <li>
-                <a target="_blank" rel="nofollow"><img src="{DT_SKIN}image/ad06.png" alt="电线电缆专业网"></a>
+                <a href="#" target="_blank" rel="nofollow"><img src="{DT_SKIN}image/ad06.png" alt="电线电缆专业网"></a>
             </li>
         </ul>
     </div>
@@ -55,11 +55,11 @@
 
             <!--市场行情-->
             <div style="height: 280px;border: 1px solid #ccc;margin-top: 10px">
-                <h2 style=" border-bottom: 1px solid #ccc;height: 31px;line-height: 31px;padding: 0 10px 0 10px;background: #F3F8FC url() repeat-x;">市场行情<span style="float: right;font-weight: normal"><a href="{$MODULE[7][linkurl]}" style="color: #F2975A;">更多..</a></span></h2>
+                <h2 style=" border-bottom: 1px solid #ccc;height: 31px;line-height: 31px;padding: 0 10px 0 10px;background: #F3F8FC url() repeat-x;">技术资讯<span style="float: right;font-weight: normal"><a href="{$MODULE[7][linkurl]}" style="color: #F2975A;">更多..</a></span></h2>
                 <div style="padding: 15px 5px 15px 5px;">
                     <div style="padding: 0 5px;width: 425px;display: inline-block">
                         <ul>
-                            <!--{php $tags=tag("moduleid=7&condition=status=3&areaid=$cityid&pagesize=8&datetype=2&order=addtime desc&target=_blank&template=null")}-->
+                            <!--{php $tags=tag("moduleid=21&condition=status=3&areaid=$cityid&pagesize=8&datetype=6&order=addtime desc&target=_blank&template=null")}-->
                             {loop $tags $i $t}
                             <li style="padding-bottom: 10px ;font-size:13px">
                                 <span class="points"><i style=""></i></span>
@@ -87,12 +87,12 @@
                     <!--{php $tags=tag("moduleid=21&condition=status=3 and level=1&areaid=$cityid&order=addtime desc&pagesize=16&datetype=2&template=null")}-->
                  <ul>
                     {loop $tags $i $t}
-                     <li style="padding:5px 0;font-size: 12px;"><span class="points"><i></i></span><a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}">{dsubstr($t[title], 33, '...')}</a><span style="float: right">[{date('Y-m-d', $t[addtime])}]</span></li>
+                     <li style="padding:5px 0;font-size: 12px;"><span class="points"><i></i></span><a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}">{dsubstr($t[title], 30, '...')}</a><span style="float: right">[{date('Y-m-d', $t[addtime])}]</span></li>
                     {/loop}
                  </ul>
-                <div style="width: 92%;margin: 11px 13px">
-                    <span><a><img src="{DT_SKIN}image/125-9501.png" alt="电缆网" width="125" height="95"/></a></span>
-                    <span style="float: right"><a><img src="{DT_SKIN}image/125-9502.png" alt="电线电缆专业网" width="125" height="95"/></a></span>
+                <div style="width: 92%;margin: 19px 13px">
+                    <span><a href=""><img src="{DT_SKIN}image/125-9501.png" alt="电缆网" width="125" height="95"/></a></span>
+                    <span style="float: right"><a href=""><img src="{DT_SKIN}image/125-9502.png" alt="电线电缆专业网" width="125" height="95"/></a></span>
                 </div>
             </div>
         </div>
@@ -116,7 +116,7 @@
                     </li>
                     {/loop}
                 </ul>
-                <ul class="piclist swaplist"></ul>
+<!--                 <ul class="piclist swaplist"></ul> -->
             </div>
             <div class="og_prev"></div>
             <div class="og_next"></div>
@@ -289,7 +289,7 @@
 <!--广告位-->
 <div>
     <div style="width: 1000px;margin: 20px auto">
-        <a><img src="http://www.gjdlswpt.com/file/upload/201706/16/10-20-00-23-1.png" /></a>
+        <a href="#"><img src="http://www.gjdlswpt.com/file/upload/201706/16/10-20-00-23-1.png" /></a>
     </div>
 </div>
 <!--广告位end-->

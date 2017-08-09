@@ -16,11 +16,11 @@
             </div>
             <div class="cen-b-b">
                 <div class="cen-b-a-a">
-                    <span><a href="{userurl($username, 'file=photo', $domain)}"><img src="{DT_STATIC}{$MODULE[7][moduledir]}/image/more.gif"/></a></span>公司新闻 <font style="color: #990000;">News &amp; Events</font></div>
+                    <span><a href="{userurl($username, 'file=photo', $domain)}"><img src="{DT_STATIC}{$MODULE[4][moduledir]}/image/more.gif"/></a></span>公司新闻 <font style="color: #990000;">News &amp; Events</font></div>
                 <div class="cen-b-b-b">                   
                             <div class="cen-b-b-a">
                                 <ul>
-                            <!--{php $tags=tag("moduleid=7&condition=status=3&areaid=$cityid&pagesize=7&datetype=2&order=addtime desc&target=_blank&template=null")}-->
+                            <!--{php $tags=tag("moduleid=10&condition=status=3&areaid=$cityid&pagesize=7&datetype=2&order=addtime desc&target=_blank&template=null")}-->
                             {loop $tags $i $t}
                             <li>
                                 <a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}">{dsubstr($t[title], 30, '...')}</a>

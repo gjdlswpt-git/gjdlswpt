@@ -1,2 +1,3 @@
 # Robots For DESTOON B2B
 
+Sitemap: http://www.gjdlswpt.cn/sitemap.xml

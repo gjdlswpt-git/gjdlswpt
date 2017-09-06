@@ -17,4 +17,12 @@ RewriteRule ^(company)/([a-z0-9_\-]+)([/])?$ $1/index.php?homepage=$2
 RewriteRule ^(company)/extend/image.php?auth=[A-Za-z0-9]+$ /404.php
 rewriteCond %{http_host} ^gjdlswpt.cn [NC]
 rewriteRule ^(.*)$ http://www.gjdlswpt.cn/$1 [R=301,L]
+
+
+
+RewriteCond %{HTTP_USER_AGENT} ^.*(Googlebot|Googlebot|Mediapartners|Adsbot|Feedfetcher)-?(Google|Image)? [NC]
+# or RewriteCond %{HTTP_USER_AGENT} ^.*google.* [NC]
+RewriteRule http://www.gjdlswpt.cn/index.php/ /503.php
+#RewriteCond .* /503\.php [NC]
+#RewriteRule index.php.*  503.php
 </IfModule>

@@ -3,4 +3,4 @@ User-agent: *
 Disallow: /admin/
 Disallow: /api/
 Disallow: /member/
-Sitemap: http://www.gjdlswpt.cn/sitemap.xml
+Sitemap: http://www.gjdlswpt.cn/sitemaps.xml

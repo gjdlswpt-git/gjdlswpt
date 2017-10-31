@@ -79,23 +79,17 @@
 <!-- 顶部 -->
 <div class="inter_top">
     <div class="w1000 clear">
-        <div class="inter_top_left" id="destoon_member">
-        </div>
-
+        <div class="welcome">您好！欢迎来到国际电缆商务平台！</div>
         <div class="inter_top_right">
-            <ul>
-                {if $DT[city]}<span class="s_change">[<em>{$city_name}</em>]<a href="{DT_PATH}api/city.php" title="点击切换城市" rel="nofollow">切换</a></span>{/if}
-                <span><script type="text/javascript">addFav('收藏本页');</script></span>
-                {if $EXT[wap_enable]}<span class="s_phone"><a href="{$EXT[wap_url]}mobile.php">手机版</a></span>{/if}
-            </ul>
+            <div class="inter_top_left" id="destoon_member"></div>
         </div>
     </div>
 </div>
 
 
 
-<div class="advert" style="display:none;">
-    {ad(25)}
+<div class="advert">
+    <a href="javascipt:void(0)"><img src="{DT_SKIN}image/advert1.jpg" alt="" width="1000" height="100" /></a>
 </div>
 
 
@@ -157,28 +151,23 @@
 
 
 <!-- 导航栏 -->
-<div class="inter_nav">
-    <div class="w1000">
+<div class="cable_nav">
+    <div class="w1200" style="width: 980px;margin: 0 auto">
         <ul>
-            <li class="industry_classify">
-                <span style="background:url({DT_SKIN}image/icon_classify.png) no-repeat 14px center;">
-                <a href="#" onclick="Go('{DT_PATH}sitemap/{rewrite('index.php?mid=5')}');return false;" style="display:block;color:#FFF;font-size:16px;width:75px;margin-left:0;">行业分类</a>
-                </span>
+            <li{if $moduleid<2} class="active"{/if}><a href="{$MODULE[1][linkurl]}">首页</a></li>
+            {loop $MODULE $m}
+            {if $m[ismenu]}
+            <li{if $m[moduleid]==$moduleid} class="active"{/if}>
+            <a href="{$m[linkurl]}">{$m[name]}</a>
             </li>
-        </ul>
-        <a id="this" {if $moduleid<2} class="this" {/if} href="{$MODULE[1][linkurl]}"><h2>首页</h2></a>
-        {loop $MODULE $m}
-            {if $m[ismenu]}          
-                <a id="nav_list" href="{$m[linkurl]}" {if $m[isblank]} target="_blank"{/if} {if $m[moduleid]==$moduleid} class="this"{/if}  {if $m[moduleid]==23} rel="nofollow" {/if}>
-                    <h2 {if $m[style]} style="color:{$m[style]};"{/if}>{$m[name]}</h2>
-                </a>
             {/if}
             {/loop}
+        </ul>
     </div>
 </div>
 
 
-<hr style="display:block;border-top:2px solid #1C86E5;" />
+<!--<hr style="display:block;border-top:2px solid #1C86E5;" />-->
 
 
 

@@ -10,29 +10,92 @@
 
 
 <!--底部-->
-<div class="bottom">
-    <div class="nav">
-        <a href="http://www.gjdlswpt.cn" alt="电线电缆专业网">网站首页</a>
-        <em>|</em><a href="{$MODULE[1][linkurl]}sitemap/" alt="电缆网网站地图">网站地图</a>
-        <em>|</em><a href="{$EXT[spread_url]}" rel="nofollow">排名推广</a>
-        {if $EXT[ad_enable]}<em>|</em><a href="{$EXT[ad_url]}" rel="nofollow">广告服务</a>{/if}
-        {if $EXT[gift_enable]}<em>|</em><a href="{$EXT[gift_url]}" rel="nofollow">积分换礼</a>{/if}
-        {if $EXT[guestbook_enable]}<em>|</em><a href="{$EXT[guestbook_url]}" rel="nofollow">网站留言</a>{/if}
-    </div>
-   <p style="width:300px;margin:0 auto;font-size: 13px;">地址：武昌区青菱乡烽火机电大市场</p><p style="width:300px;margin:0 auto;font-size: 13px;">网站备案号：鄂ICP备16019259号-3</p>
-    <div class="p">
-        {if $DT[icpno]} | <a href="http://www.miibeian.gov.cn" target="_blank" rel="nofollow">{$DT[icpno]}</a>{/if} 
+<div class="cable_footer">
+    <div class="w1200">
+        <div class="list">
+            <div class="logo"><img src="{DT_SKIN}image/footer_logo.jpg" width="195" height="200" alt=""></div>
+            <div class="and">
+                <div class="img">
+                    <img src="{DT_SKIN}image/andro.png" width="140" height="140" alt="">
+                </div>
+                <p>安卓APP下载</p>
+            </div>
+            <div class="ios">
+                <div class="img">
+                    <img src="{DT_SKIN}image/ios.png" width="140" height="140" alt="">
+                </div>
+                <p>IOS APP下载</p>
+            </div>
+            <div class="tel">
+                <dl>
+                    <dt>全国服务热线：</dt>
+                    <dd>400-3325256</dd>
+                </dl>
+            </div>
+        </div>
+        <div class="copyright">
+            <ul>
+                <li><a href="/">网站网页</a>|</li>
+                <li><a href="{$MODULE[1][linkurl]}sitemap/">网站地图</a>|</li>
+                <li><a href="{$EXT[spread_url]}">排名推广</a>|</li>
+                {if $EXT[ad_enable]}<li><a href="{$EXT[ad_url]}">广告服务</a>|</li>{/if}
+                {if $EXT[gift_enable]}<li><a href="{$EXT[gift_url]}">积分换礼</a>|</li>{/if}
+                {if $EXT[guestbook_enable]}<li><a href="{$EXT[guestbook_url]}">网站留言</a></li>{/if}
+            </ul>
+            <p>地址：武昌区青菱乡烽火机电大市场 网站备案号：鄂ICP备16019259号-3</p>
+        </div>
     </div>
 </div>
 
 
 
 <div id="back2top" class="back2top"><a href="javascript:void(0);" title="返回顶部">&nbsp;</a></div>
+<script type="text/javascript" src="{DT_STATIC}file/script/jquery-1.10.1.min.js"></script>
+<script type="text/javascript" src="{DT_STATIC}file/script/index_fade.js"></script>
+<script type="text/javascript">
+    function wordlimit(cname,wordlength){
+        for(var i=0;i<cname.length;i++){
+            var nowLength=cname[i].innerHTML.length;
+            var nowText=cname[i].innerHTML;
+            if(nowLength>wordlength){
+                cname[i].innerHTML=nowText.substr(0,wordlength)+'...';
+            }
+        }
+    }
+    wordlimit($(".module1_nav .word h3"),22);
+    wordlimit($(".module1_nav .word p"),70);
+
+    $(".brand .title li").click(function(){
+        var index = $(".brand .title li").index($(this));
+        $(this).addClass("active").siblings("li").removeClass("active");
+        $(".brand .list").eq(index).show().siblings(".brand .list").hide();
+    })
+
+    $(".cable_for .center .title li").click(function(){
+        var index = $(".cable_for .center .title li").index($(this));
+        $(this).addClass("active").siblings("li").removeClass("active");
+        $(".cable_for .center .table").eq(index).show().siblings(".cable_for .center .table").hide();
+    })
+
+    $(".classify_list").click(function(){
+        if($(this).find("ul").css("display") == "none"){
+            $(this).find("ul").stop(true).slideDown("fast");
+
+        }else{
+            $(this).find("ul").stop(true).slideUp("fast");
+        }
+    })
+
+    $(".classify_list li").click(function(){
+        var text = $(this).text();
+        $(".classify_list span").text(text);
+    })
+</script>
 <script type="text/javascript">
     {if $destoon_task}
-        show_task('{$destoon_task}');
+    show_task('{$destoon_task}');
     {else}
-        {php include DT_ROOT.'/api/task.inc.php';}
+    {php include DT_ROOT.'/api/task.inc.php';}
     {/if}
 
     {if $lazy}$(function(){$("img").lazyload();});{/if}
@@ -41,8 +104,6 @@
         $("html, body").animate({scrollTop:0}, 200);
     });
 </script>
-
-
 <script type="text/javascript">
     /* 搜索点击下拉列表 */
     $(".search_list").click(function(){
@@ -62,8 +123,8 @@
     /* 轮播图 */
     $(function(){
         $(".banner").fade({
-            oBox:$(".banner"),          
-            oLi:$(".slideul li"), 
+            oBox:$(".banner"),
+            oLi:$(".slideul li"),
             sUl:$(".slidelist ul"),
             oSpeed:700,
             oTimer:2000,
@@ -71,7 +132,7 @@
         })
     });
 
-    
+
     /* 招聘求职tab切换 */
     $(".inter_center_header .ac").mouseenter(function(){
         $(this).addClass("this").siblings(".ac").removeClass("this");
@@ -81,10 +142,10 @@
 
 
     /* 飘窗 */
-    /*$("body").floatAd({
+    $("body").floatAd({
         imgSrc: '{DT_SKIN}image/floatAd.png',
         url: '/'
-    });*/
+    });
 
 
     /* 悬浮侧栏 */
@@ -104,8 +165,9 @@
 
     $(".fixed-close").click(function(){
         $(this).parents(".div").hide();
-    }); 
+    });
 </script>
+
 <!-- 站长推送开始 -->
 <script>
 (function(){

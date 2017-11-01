@@ -230,10 +230,10 @@
 
                 <div class="module1">
                     <div class="title">
-                        <h4>电线电缆</h4>
+                        <h4>电缆原料</h4>
                         <a href="{$MODULE[5][linkurl]}">更多</a>
                     </div>
-                    <!--{php $tags=tag("moduleid=5&condition=status=3 and level=1 and thumb<>''&catid=80&areaid=$cityid&pagesize=1&datetype=2&order=addtime desc&target=_blank&template=null")}-->
+                    <!--{php $tags=tag("moduleid=5&condition=status=3 and level=1 and thumb<>''&catid=81&areaid=$cityid&pagesize=1&datetype=2&order=addtime desc&target=_blank&template=null")}-->
                     {loop $tags $i $t}
                     <div class="module1_nav">
                         <a href="{$t[linkurl]}">
@@ -247,7 +247,7 @@
                     {/loop}
                     <div class="list">
                         <ul>
-                            <!--{php $tags=tag("moduleid=5&condition=status=3&catid=80&areaid=$cityid&pagesize=5&datetype=2&order=addtime desc&target=_blank&template=null")}-->
+                            <!--{php $tags=tag("moduleid=5&condition=status=3&catid=81&areaid=$cityid&pagesize=5&datetype=2&order=addtime desc&target=_blank&template=null")}-->
                             {loop $tags $i $t}
                             <li><a href="{$t[linkurl]}"><span>{$t[title]}</span><i>{date('Y-m-d', $t[addtime])}</i></a></li>
                             {/loop}
@@ -304,7 +304,7 @@
             <div class="left">
                 <div class="module1">
                     <div class="title">
-                        <h4>通信电缆</h4>
+                        <h4>通信光缆</h4>
                         <a href="{$MODULE[6][linkurl]}">更多</a>
                     </div>
                     <!--{php $tags=tag("moduleid=6&condition=status=3 and level=1 and thumb<>''&catid=88&areaid=$cityid&pagesize=1&datetype=2&order=addtime desc&target=_blank&template=null")}-->

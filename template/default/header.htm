@@ -51,7 +51,7 @@
     <script type="text/javascript" src="{DT_STATIC}file/script/fade.js"></script>
     <script type="text/javascript" src="{DT_STATIC}file/script/floatAd.js"></script>
      <script type="text/javascript" src="{DT_STATIC}file/script/move.js"></script>
-
+    <script type="text/javascript" src="{DT_STATIC}file/script/jquery-1.10.1.min.js"></script>
 
     {if $lazy}<script type="text/javascript" src="{DT_STATIC}file/script/jquery.lazyload.js"></script>{/if}
     {if $JS}
@@ -166,6 +166,26 @@
     </div>
 </div>
 
+
+<script type="text/javascript">
+    var str = window.location.href;
+
+    if(str.indexOf('list-113') >= 0){
+        $(".cable_nav li").eq(11).addClass("active").siblings("li").removeClass("active");
+    }else if(str.indexOf('list-115') >= 0){
+        $(".cable_nav li").eq(12).addClass("active").siblings("li").removeClass("active");
+    }else if(str.indexOf('list-116') >= 0){
+        $(".cable_nav li").eq(13).addClass("active").siblings("li").removeClass("active");
+    }else if(str.indexOf('list-114') >= 0){
+        $(".cable_nav li").eq(14).addClass("active").siblings("li").removeClass("active");
+    }else if(str.indexOf('list-52') >= 0){
+        $(".cable_nav li").eq(15).addClass("active").siblings("li").removeClass("active");
+    }else if(str.indexOf('list-53') >= 0){
+        $(".cable_nav li").eq(16).addClass("active").siblings("li").removeClass("active");
+    }else if(str.indexOf('sitemap') >= 0){
+        $(".cable_nav li").eq(17).addClass("active").siblings("li").removeClass("active");
+    }
+</script>
 
 <!--<hr style="display:block;border-top:2px solid #1C86E5;" />-->
 

@@ -36,6 +36,7 @@
 		<div class="type">
 		<a href="{$MOD[linkurl]}{$linkurl}" class="type_1">全部</a>
 		{loop $TYPE $k $v}
+		{php dump($linkurl)}
 		<a href="javascript:Go('{$MOD[linkurl]}{rewrite('index.php?typeid='.$k.'&catid='.$catid)}');" class="type_2">{$v}</a>
 		{/loop}
 		</div>
@@ -43,6 +44,7 @@
 		<div class="img_tip" id="img_tip" style="display:none;">&nbsp;</div>
 		{if $page == 1}{ad($moduleid,$catid,$kw,6)}{/if}
 		{if $tags}{template 'list-'.$module, 'tag'}{/if}
+
 		<br/>
 	</div>
 </div>

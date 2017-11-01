@@ -113,7 +113,7 @@
                 </form>
 
 
-                <div id="search_module" style="display:none;" onmouseout="Dh('search_module');" onmouseover="Ds('search_module');">
+                <div id="search_module" style="display:none;left: 310px;top:35px;" onmouseout="Dh('search_module');" onmouseover="Ds('search_module');">
                     {loop $MODULE $m}{if $m[ismenu] && !$m[islink]}
                     <a href="javascript:void(0);" onclick="setModule('{$m[moduleid]}','{$m[name]}')">{$m[name]}</a>{/if}
                     {/loop}

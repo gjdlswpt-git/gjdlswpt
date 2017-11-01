@@ -137,7 +137,7 @@
                         <ul>
                             <!--{php $tags=tag("moduleid=5&condition=status=3&catid=75&areaid=$cityid&pagesize=5&datetype=2&order=addtime desc&target=_blank&template=null")}-->
                             {loop $tags $i $t}
-                            <li><a href=""><span>{$t[title]}</span><i>{date('Y-m-d', $t[addtime])}</i></a></li>
+                            <li><a href="{$t[linkurl]}"><span>{$t[title]}</span><i>{date('Y-m-d', $t[addtime])}</i></a></li>
                             {/loop}
                         </ul>
                     </div>
@@ -675,7 +675,7 @@
                         <td align="center" width="130">薪资</td>
                         <td align="center" width="110">地区</td>
                     </tr>
-                    <!--{php $tags=tag("moduleid=9&condition=status=3 and level>0&pagesize=10&length=30&order=edittime desc&template=null");}-->
+                    <!--{php $tags=tag("moduleid=9&condition=status=3 and level>0&pagesize=11&length=30&order=edittime desc&template=null");}-->
                     {loop $tags $i $t}
                     <tr>
                         <td align="left"><a href="{$t[linkurl]}">{$t[title]}</a></td>
@@ -703,7 +703,7 @@
                         <td align="center" width="200">工作经验</td>
                         <td align="center" width="130">期望薪资</td>
                     </tr>
-                    <!--{php $tags=tag("moduleid=9&table=resume&condition=status=3&areaid=$cityid&order=hits desc&pagesize=10&template=null");}-->
+                    <!--{php $tags=tag("moduleid=9&table=resume&condition=status=3&areaid=$cityid&order=hits desc&pagesize=11&template=null");}-->
                     {loop $tags $i $t}
                     <tr>
                         <td width="250"><a href="{$t[linkurl]}">{$t[title]}</a></td>

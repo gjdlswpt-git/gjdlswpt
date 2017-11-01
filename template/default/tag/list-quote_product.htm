@@ -5,7 +5,7 @@
 </ul>-->
 <ul>
     {loop $tags $i $t}
-    <li style="padding: 10px 10px;border-bottom: #cccccc 1px dotted"><a href="{$t[linkurl]}">{dsubstr($t[title], 50, '')}<span style="float: right">发布时间：{date('Y-m-d', $t[addtime])}<span style="display: inline-block;width: 50px"></span>浏览量：{$t[hits]}</span></a></li>
+    <li style="padding: 10px 10px;border-bottom: #cccccc 1px dotted"><a href="{$t[linkurl]}">{dsubstr($t[title], 50, '')}<span style="float: right">发布时间：{date('Y-m-d', $t[addtime])}</span></a></li>
     {/loop}
 </ul>
 {if $showpage && $pages}<div class="pages">{$pages}</div>{/if}

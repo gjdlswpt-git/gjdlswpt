@@ -20,7 +20,7 @@ del,ins,u,s,a,a:hover{text-decoration:none;}
 body,textarea,input,button,select,keygen,legend{font:12px/1.14 "SimSun","Microsoft YaHei",arial,\5b8b\4f53;color:#1a1a1a;outline:0;}
 html,body{background:#fff;overflow-x:hidden;}
 body {overflow-x:hidden;font-size:14px;}
-a{color:#1a1a1a;}
+a{color:#646464;}
 a:hover {color:#1d87e6;}
 .w1200 {width:1200px;margin:0 auto;}
 .clear:after,.clear:before {display:table;content:" "}
@@ -247,7 +247,7 @@ a:hover {color:#1d87e6;}
 .cable_for .center .title a {display:block;float:right;margin-right:24px;font-size:16px;color:#666;line-height:48px;}
 .cable_for .center .title a:hover {color:#1d87e6;}
 .cable_for .center .table {width:538px;margin:0 auto;padding:7px 0 8px;}
-.cable_for .center .table td {padding:10px 0;font-size:14px;}
+.cable_for .center .table td {padding:10px 0;font-size:13px;color:#646464;}
 
 
 /* 友情链接 */

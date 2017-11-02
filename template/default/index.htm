@@ -42,7 +42,7 @@
                     <a href="http://www.gjdlswpt.cn/announce/">更多</a>
                 </div>
                 <ul>
-                    <!--{php $tags=tag("table=announce&condition=1&pagesize=14&datetype=2&length=30&order=addtime desc&template=null");}-->
+                    <!--{php $tags=tag("table=announce&condition=1&pagesize=12&datetype=2&length=30&order=addtime desc&template=null");}-->
                     {loop $tags $i $t}
                     <li><a href="{$t[linkurl]}"><span>{$t[title]}</span><i>{date('m-d', $t[addtime])}</i></a></li>
                     {/loop}
@@ -71,7 +71,7 @@
                 </div>
                 <div class="list">
                     <ul>
-                        <!--{php $tags=tag("moduleid=7&condition=status=3&catid=52&areaid=$cityid&pagesize=7&datetype=2&order=addtime desc&target=_blank&template=null")}-->
+                        <!--{php $tags=tag("moduleid=7&condition=status=3&catid=52&areaid=$cityid&pagesize=6&datetype=2&order=addtime desc&target=_blank&template=null")}-->
                         {loop $tags $i $t}
                         <li><a href="{$t[linkurl]}" {if $target} target="{$target}"{/if} title="{$t[alt]}"><span>{$t[title]}</span><i>{date('m-d', $t[addtime])}</i></a></li>
                         {/loop}

@@ -42,7 +42,7 @@
                     <a href="http://www.gjdlswpt.cn/announce/">更多</a>
                 </div>
                 <ul>
-                    <!--{php $tags=tag("table=announce&condition=1&pagesize=12&datetype=2&length=30&order=addtime desc&template=null");}-->
+                    <!--{php $tags=tag("table=announce&condition=1&pagesize=14&datetype=2&length=30&order=addtime desc&template=null");}-->
                     {loop $tags $i $t}
                     <li><a href="{$t[linkurl]}"><span>{$t[title]}</span><i>{date('m-d', $t[addtime])}</i></a></li>
                     {/loop}
@@ -382,7 +382,7 @@
                             <li><a href="{$t[linkurl]}"><span>{$t[title]}</span><i>{date('Y-m-d', $t[addtime])}</i></a></li>
                             {/loop}
                         </ul>
-                    </div>
+                    </div>                  
                 </div>
             </div>
             <div class="right">
@@ -445,7 +445,7 @@
 
 <div class="cable_advert1">
     <div class="w1200">
-        <a href="http://www.gjdlswpt.cn/company/lanyang/"><img src="{DT_SKIN}image/advert6.png" width="1200" height="100" alt="{$t[title]}"></a>
+        <a href="http://shop.gjdlswpt.com/"><img src="{DT_SKIN}image/advert6.png" width="1200" height="100" alt="{$t[title]}"></a>
     </div>
 </div>
 <!-- 推荐品牌/知名品牌/电缆知识 -->
@@ -764,7 +764,7 @@
                 {if $DT[page_text]}
                 <!--{php $tags=tag("table=link&condition=status=3 and level>0 and thumb='' and username=''&areaid=$cityid&pagesize=21&order=listorder desc,itemid desc&template=null")}-->
                 {loop $tags $i $t}
-                <li><a href="{$t[linkurl]}" target="_blank">{$t[title]}</a></li>
+                <li><a href="{$t[linkurl]}" target="_blank" rel="nofollow">{$t[title]}</a></li>
                 {/loop}
                 {/if}
             </ul>

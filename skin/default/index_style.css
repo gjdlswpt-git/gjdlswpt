@@ -139,7 +139,7 @@ a:hover {color:#1d87e6;}
 .cable_supply_buy .module1 .module1_nav .word h3 {font-size:14px;color:#323232;line-height:20px;margin-bottom:6px;}
 .cable_supply_buy .module1 .module1_nav .word p {font-size:12px;line-height:18px;color:#646464;}
 .cable_supply_buy .module1 .list {padding-bottom:18px;}
-.cable_supply_buy .module2 .list {padding-bottom:25px;}
+.cable_supply_buy .module2 .list {padding-bottom:20px;}
 .cable_supply_buy .module1 .list li,.cable_supply_buy .module2 .list li {padding:18px 10px 0;font-size:0;}
 .cable_supply_buy .module1 .list a,.cable_supply_buy .module2 .list a {width:360px;height:14px;line-height:14px;display:block;padding-left:10px;font-size:12px;color:#646464;background:url(./image/dot.jpg) no-repeat left center;}
 .cable_supply_buy .module1 .list a span,.cable_supply_buy .module2 .list a span {width:280px;display:block;float:left;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
